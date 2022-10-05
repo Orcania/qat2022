@@ -128,7 +128,7 @@ const Navbar = () => {
                             <div className="navbar-item">
                                 <button
                                     id="connect-button"
-                                    className="button cbuttonc is-fullwidth is-rounded is-burgundy has-background-hpink-o-2 has-border-2-hpink-o-10 is-shadowless navbar-button "
+                                    className="button  is-fullwidth is-rounded is-burgundy has-background-hpink-o-2 has-border-2-hpink-o-10 is-shadowless navbar-button "
                                     type="button"
                                     onClick={handleOpenWalletsModal}
                                 >
@@ -139,7 +139,7 @@ const Navbar = () => {
                     >
                         <div className="navbar-item">
                             <button
-                                className="button cbuttonc is-fullwidth is-burgundy address-button is-rounded navbar-button "
+                                className="button  is-fullwidth is-burgundy address-button is-rounded navbar-button "
                                 type="button"
                                 onClick={handleOpenWalletAccountModal}
                             >

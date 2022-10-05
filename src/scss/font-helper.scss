@@ -2,6 +2,28 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=PT+Mono&display=swap');
 
+// define font and import
+@font-face {
+    font-family: 'Qatar';
+    src: url(../../public/media/fonts/Qatar2022Arabic-Medium.woff) format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'QatarArabic';
+    src: url(../../public/media/fonts/Qatar2022Arabic-Medium.woff) format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+.has-font-qatar {
+    font-family: 'Qatar', sans-serif;
+}
+
+.has-font-qatar-arabic {
+    font-family: 'QatarArabic', sans-serif;
+}
 
 .has-font-airborne {
     font-family: 'Airborne', sans-serif;

@@ -1,0 +1,8 @@
+.maintitle {
+    font-size: 5rem !important;
+    font-weight: 700;
+
+    @media screen and (max-width: 769px) {
+        font-size: 2rem !important;
+    }
+}
