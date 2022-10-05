@@ -1,5 +1,8 @@
 @import './vars';
 
+$color1: rgb(218, 68, 68);
+$color2: rgb(255, 255, 255);
+
 /* width */
 .coolscroll::-webkit-scrollbar {
     width: 10px;
@@ -8,18 +11,18 @@
 
 /* Track */
 .coolscroll::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.8);
+    background: $color2;
 }
 
 /* Handle */
 .coolscroll::-webkit-scrollbar-thumb {
-    background: linear-gradient(0deg, $hblue 0%, $hpurple 100%);
+    background: linear-gradient(0deg, $color1 0%, $color2 100%);
     border-radius: 10px;
 }
 
 /* Handle on hover */
 .coolscroll::-webkit-scrollbar-thumb:hover {
-    background: rgba(rgba(255, 255, 255, 0.2), 0.6);
+    background: rgba($color1, 0.6);
 }
 
 .coolscroll-small::-webkit-scrollbar {
@@ -28,15 +31,15 @@
 }
 
 .coolscroll-small::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.8);
+    background: $color2;
     border-radius: 10px;
 }
 
 .coolscroll-small::-webkit-scrollbar-thumb {
-    background: linear-gradient(0deg, $hblue 0%, $hpurple 100%);
+    background: linear-gradient(0deg, $color1 0%, $color2 100%);
     border-radius: 10px;
 }
 
 .coolscroll-small::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(0deg, rgba($hblue, 0.75) 0%, rgba($hpurple, 0.75) 100%);
+    background: rgba($color1, 0.6);
 }
