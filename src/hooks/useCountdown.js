@@ -1,9 +1,13 @@
 import { useState, useEffect } from 'react';
 
 const fetchTime = async () => {
-    const data = await fetch('https://worldtimeapi.org/api/timezone/America/New_York');
-    const json = await data.json();
-    return json.unixtime * 1000;
+    try {
+        const data = await fetch('https://worldtimeapi.org/api/timezone/America/New_York');
+        const json = await data.json();
+        return json.unixtime * 1000;
+    } catch (e) {
+        return new Date().getTime();
+    }
 };
 
 const useCountdown = unixMilliseconds => {

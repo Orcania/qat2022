@@ -1,6 +1,6 @@
 @import './vars';
 
-$color1: rgb(218, 68, 68);
+$color1: $burgundy;
 $color2: rgb(255, 255, 255);
 
 /* width */
@@ -16,13 +16,13 @@ $color2: rgb(255, 255, 255);
 
 /* Handle */
 .coolscroll::-webkit-scrollbar-thumb {
-    background: linear-gradient(0deg, $color1 0%, $color2 100%);
+    background: $color1;
     border-radius: 10px;
 }
 
 /* Handle on hover */
 .coolscroll::-webkit-scrollbar-thumb:hover {
-    background: rgba($color1, 0.6);
+    background: rgba($color1, 0.8);
 }
 
 .coolscroll-small::-webkit-scrollbar {
@@ -36,10 +36,10 @@ $color2: rgb(255, 255, 255);
 }
 
 .coolscroll-small::-webkit-scrollbar-thumb {
-    background: linear-gradient(0deg, $color1 0%, $color2 100%);
+    background: $color1;
     border-radius: 10px;
 }
 
 .coolscroll-small::-webkit-scrollbar-thumb:hover {
-    background: rgba($color1, 0.6);
+    background: rgba($color1, 0.8);
 }

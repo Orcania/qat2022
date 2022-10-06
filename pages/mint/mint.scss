@@ -3,6 +3,67 @@
     font-weight: 700;
 
     @media screen and (max-width: 769px) {
+        font-size: 3rem !important;
+    }
+}
+
+.ccont {
+    margin: 0 3rem;
+
+    @media screen and (max-width: 769px) {
+        margin: 0 1.5rem;
+    }
+}
+
+.ctitle {
+    font-size: 4.5rem !important;
+
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: calc(100% + 20px);
+        display: block;
+        width: 30px;
+        height: 30px;
+        top: 20%;
+        background-color: #02af9c;
+        border-radius: 10px;
+        transform: rotate(45deg) translateY(-50%);
+        margin-top: 1rem;
+    }
+    // make last child background transparent
+    &:last-child {
+        background: red;
+        &::after {
+            background-color: red;
+        }
+    }
+
+    @media screen and (max-width: 769px) {
         font-size: 2rem !important;
+
+        &::after {
+            left: calc(100% + 20px);
+            width: 15px;
+            height: 15px;
+            top: 5%;
+            border-radius: 5px;
+        }
+    }
+}
+
+.cnone {
+    &::after {
+        display: none;
+    }
+}
+
+.divbanner {
+    margin-bottom: 3rem;
+
+    @media screen and (max-width: 769px) {
+        margin-bottom: 6rem;
     }
 }

@@ -9,6 +9,7 @@ import { useDispatch } from 'react-redux';
 import { useCelesteSelector, ConnectedWrapper } from '@celeste-js/react';
 
 import { open_modal } from 'src/redux/actions';
+import socialMedia from 'src/static/social-media';
 import modals from 'src/static/app.modals';
 
 const getAddressReduced = address => `${address.slice(0, 6)}...${address.slice(-4)}`;
@@ -71,8 +72,9 @@ const Navbar = () => {
             role="navigation"
             aria-label="main navigation"
         >
-            <div className="navbar-brand  py-2">
-                {/* <a
+            <div className="container">
+                <div className="navbar-brand  py-2">
+                    {/* <a
                     href="https://www.chaoticdjs.com/"
                     className="navbar-item"
                     onClick={handleNavbarItemClick}
@@ -81,72 +83,78 @@ const Navbar = () => {
                     <img src="./media/logo.png" width="120" alt="" />
                 </a> */}
 
-                <a
-                    role="button"
-                    className={`navbar-burger  ${burgerActive ? 'is-active' : ''}`}
-                    aria-label="menu"
-                    aria-expanded="false"
-                    data-target="navbarBasicExample"
-                    onClick={handleHamburgerClick}
-                >
-                    <span aria-hidden="true" />
-                    <span aria-hidden="true" />
-                    <span aria-hidden="true" />
-                </a>
-            </div>
-
-            <div className={`navbar-menu ${mobileActive ? 'is-active' : ''}`}>
-                <div className="navbar-start">
-                    <Link href="/mint">
-                        <a className="navbar-item " onClick={handleNavbarItemClick} role="button">
-                            <span> Home</span>
-                        </a>
-                    </Link>
-
-                    <Link href="/mint">
-                        <a className="navbar-item " onClick={handleNavbarItemClick} role="button">
-                            <span> Teams</span>
-                        </a>
-                    </Link>
-
-                    <Link href="/mint">
-                        <a className="navbar-item " onClick={handleNavbarItemClick} role="button">
-                            <span> How To</span>
-                        </a>
-                    </Link>
-
-                    <Link href="/mint">
-                        <a className="navbar-item " onClick={handleNavbarItemClick} role="button">
-                            <span> VAR</span>
-                        </a>
-                    </Link>
+                    <a
+                        role="button"
+                        className={`navbar-burger  ${burgerActive ? 'is-active' : ''}`}
+                        aria-label="menu"
+                        aria-expanded="false"
+                        data-target="navbarBasicExample"
+                        onClick={handleHamburgerClick}
+                    >
+                        <span aria-hidden="true" />
+                        <span aria-hidden="true" />
+                        <span aria-hidden="true" />
+                    </a>
                 </div>
 
-                <div className="navbar-end">
-                    <ConnectedWrapper
-                        disconnectedComponent={
+                <div className={`navbar-menu ${mobileActive ? 'is-active' : ''}`}>
+                    <div className="navbar-start">
+                        <Link href="/mint">
+                            <a className="navbar-item " onClick={handleNavbarItemClick} role="button">
+                                <span> Home</span>
+                            </a>
+                        </Link>
+
+                        <Link href="/mint">
+                            <a className="navbar-item " onClick={handleNavbarItemClick} role="button">
+                                <span> Teams</span>
+                            </a>
+                        </Link>
+
+                        <Link href="/mint">
+                            <a className="navbar-item " onClick={handleNavbarItemClick} role="button">
+                                <span> How To</span>
+                            </a>
+                        </Link>
+
+                        <Link href="/mint">
+                            <a className="navbar-item " onClick={handleNavbarItemClick} role="button">
+                                <span> VAR</span>
+                            </a>
+                        </Link>
+                    </div>
+
+                    <div className="navbar-end">
+                        {socialMedia.map(item => (
+                            <a key={item.id} href={item.url} className="navbar-item" target="_blank" rel="noreferrer">
+                                <span className="icon is-size-4">{item.icon()}</span>
+                            </a>
+                        ))}
+                        <ConnectedWrapper
+                            disconnectedComponent={
+                                <div className="navbar-item">
+                                    <button
+                                        id="connect-button"
+                                        className="button  is-fullwidth is-rounded is-burgundy has-background-hpink-o-2 has-border-2-hpink-o-10 is-shadowless navbar-button "
+                                        type="button"
+                                        onClick={handleOpenWalletsModal}
+                                    >
+                                        Connect Wallet
+                                    </button>
+                                </div>
+                            }
+                        >
                             <div className="navbar-item">
                                 <button
-                                    id="connect-button"
-                                    className="button  is-fullwidth is-rounded is-burgundy has-background-hpink-o-2 has-border-2-hpink-o-10 is-shadowless navbar-button "
+                                    className="button  is-fullwidth is-burgundy address-button is-rounded navbar-button "
                                     type="button"
-                                    onClick={handleOpenWalletsModal}
+                                    onClick={handleOpenWalletAccountModal}
                                 >
-                                    Connect Wallet
+                                    {walletReducer.address && getAddressReduced(walletReducer.address)}
                                 </button>
                             </div>
-                        }
-                    >
-                        <div className="navbar-item">
-                            <button
-                                className="button  is-fullwidth is-burgundy address-button is-rounded navbar-button "
-                                type="button"
-                                onClick={handleOpenWalletAccountModal}
-                            >
-                                {walletReducer.address && getAddressReduced(walletReducer.address)}
-                            </button>
-                        </div>
-                    </ConnectedWrapper>
+                        </ConnectedWrapper>
+                    </div>
                 </div>
             </div>
         </nav>
