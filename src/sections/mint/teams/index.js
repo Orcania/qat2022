@@ -32,24 +32,6 @@ const TeamSection = () => {
                     </div>
                 );
             })}
-            {/* <div className="group_a">
-                <h1 className="title has-text-cream has-text-centered has-font-qatar">Group A</h1>
-                <div>
-                    <div className="is-flex is-justify-content-center">
-                        {group_a.map(item => (
-                            <div className="team mx-3" key={item.id}>
-                                <img className={flag_image} src={item.img} alt={item.name} width={100} />
-                                <h1 className="subtitle has-text-cream has-font-qatar has-text-centered ">
-                                    {item.name}
-                                </h1>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div> */}
-            <div className="group_b">
-                <h1 className="cooltitle">Group B</h1>
-            </div>
         </div>,
         name
     );
