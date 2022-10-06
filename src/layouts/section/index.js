@@ -5,7 +5,7 @@ const { header, sectiontitle } = styles;
 
 const SectionLayout = ({ children, name }) => {
     return (
-        <div className="py-6">
+        <div className="py-6 has-bg-burgundy">
             <div className="container">
                 <div className={`mb-6 ${header}`}>
                     <Logo />
@@ -19,7 +19,7 @@ const SectionLayout = ({ children, name }) => {
     );
 };
 
-export const getSectionLayout = (page, sectionName = 'Section name') => (
+export const getLayout = (page, sectionName = 'Section name') => (
     <SectionLayout name={sectionName}>{page}</SectionLayout>
 );
 

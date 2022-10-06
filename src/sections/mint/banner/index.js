@@ -12,7 +12,7 @@ const BannerSection = () => {
     return (
         <section className="banner" style={{ minHeight: '100vh' }}>
             <div className="container">
-                <div className="cc py-6" style={{ minHeight: '100%' }}>
+                <div className="cc pt-6" style={{ minHeight: '100%' }}>
                     <div className="divbanner">
                         <Logo />
                     </div>

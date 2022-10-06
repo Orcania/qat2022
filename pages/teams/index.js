@@ -5,7 +5,7 @@ import TeamSection from 'src/sections/mint/teams';
 
 const TeamsPage = () => {
     return (
-        <div className="has-bg-burgundy" style={{ minHeight: '100vh' }}>
+        <div style={{ minHeight: '100vh' }}>
             <TeamSection />
         </div>
     );

@@ -1,4 +1,4 @@
-import { getSectionLayout as getLayout } from 'src/layouts/section';
+import { getLayout } from 'src/layouts/section';
 
 import groupsData from 'src/static/groups';
 
