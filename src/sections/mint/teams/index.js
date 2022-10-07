@@ -1,12 +1,10 @@
-import { getLayout } from 'src/layouts/section';
+import Image from 'next/image';
 
 import groupsData from 'src/static/groups';
 
 import styles from './team.module.scss';
 
-const { flag_image, cooltitle } = styles;
-
-const name = 'Team';
+const { flag_image } = styles;
 
 const TeamSection = () => {
     return (
@@ -20,7 +18,13 @@ const TeamSection = () => {
                                 {group.teams.map(team => {
                                     return (
                                         <div key={team.id} className="mx-4">
-                                            <img className={flag_image} src={team.img} alt={team.name} width={100} />
+                                            <Image
+                                                src={team.img}
+                                                alt={team.name}
+                                                width={100}
+                                                height={100}
+                                                className={flag_image}
+                                            />
                                             <h2 className="subtitle has-text-cream has-font-qatar has-text-centered mt-2">
                                                 {team.name}
                                             </h2>
