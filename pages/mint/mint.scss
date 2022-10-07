@@ -23,13 +23,13 @@
     &::after {
         content: '';
         position: absolute;
-        left: calc(100% + 20px);
+        left: calc(100% + 40px);
         display: block;
-        width: 30px;
-        height: 30px;
+        width: 10px;
+        height: 10px;
         top: 20%;
         background-color: #02af9c;
-        border-radius: 10px;
+        border-radius: 2px;
         transform: rotate(45deg) translateY(-50%);
         margin-top: 1rem;
     }
