@@ -1,7 +1,30 @@
+@import 'src/scss/vars';
+
 .cooltable {
     width: 40vw;
 
     @media screen and (max-width: 768px) {
         width: 90vw;
+
+        thead tr th h1 {
+            font-size: 2rem !important;
+        }
+    }
+}
+
+.cooltable2 {
+    @media screen and (max-width: 768px) {
+        width: 90vw !important;
+    }
+
+    tbody tr:not(.is-selected):hover {
+        background-color: rgba($cream, 0.2) !important;
+    }
+
+    tbody tr:last-child {
+        td {
+            color: $gold !important;
+            font-size: 1.5rem;
+        }
     }
 }

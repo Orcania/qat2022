@@ -9,12 +9,12 @@ const { flag_image, cooltitle } = styles;
 const name = 'Team';
 
 const TeamSection = () => {
-    return getLayout(
+    return (
         <div>
             {groupsData.map(group => {
                 return (
                     <div key={group.id} style={{ margin: '0 0 5rem 0' }}>
-                        <h1 className={`${cooltitle}  has-text-centered has-font-qatar mb-5`}>{group.name}</h1>
+                        <h1 className="cooltitle has-text-centered has-font-qatar mb-5">{group.name}</h1>
                         <div>
                             <div className="is-flex is-justify-content-center">
                                 {group.teams.map(team => {
@@ -32,8 +32,7 @@ const TeamSection = () => {
                     </div>
                 );
             })}
-        </div>,
-        name
+        </div>
     );
 };
 

@@ -61,3 +61,14 @@
         }
     }
 }
+
+.cooltitle {
+    background-image: url(../../public/media/button_c.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    font-size: 2rem;
+    color: $burgundy;
+
+    padding: 0.25rem 1.5rem;
+}

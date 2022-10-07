@@ -1,5 +1,6 @@
 import { getLayout as getPageTitleLayout } from 'src/layouts/page-title';
 import { getLayout as getMainLayout } from 'src/layouts/main';
+import { getLayout as getSectionLayout } from 'src/layouts/section';
 
 import TeamSection from 'src/sections/mint/teams';
 
@@ -11,6 +12,6 @@ const TeamsPage = () => {
     );
 };
 
-TeamsPage.getLayout = page => getPageTitleLayout(getMainLayout(page), 'Teams');
+TeamsPage.getLayout = page => getPageTitleLayout(getMainLayout(getSectionLayout(page, 'Teams')), 'Teams');
 
 export default TeamsPage;
