@@ -106,7 +106,7 @@ $corners: 'top', 'right', 'bottom', 'left';
 
     @each $corner in $corners {
         .has-#{$corner}-border-#{$colorName} {
-            border-#{$corner}: 1px solid $color;
+            border-#{$corner}: 1px solid $color !important;
         }
     }
 }

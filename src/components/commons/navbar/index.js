@@ -105,19 +105,19 @@ const Navbar = () => {
                             </a>
                         </Link>
 
-                        <Link href="/mint">
+                        <Link href="/teams">
                             <a className="navbar-item " onClick={handleNavbarItemClick} role="button">
                                 <span> Teams</span>
                             </a>
                         </Link>
 
-                        <Link href="/mint">
+                        <Link href="/howto">
                             <a className="navbar-item " onClick={handleNavbarItemClick} role="button">
                                 <span> How To</span>
                             </a>
                         </Link>
 
-                        <Link href="/mint">
+                        <Link href="/var">
                             <a className="navbar-item " onClick={handleNavbarItemClick} role="button">
                                 <span> VAR</span>
                             </a>
