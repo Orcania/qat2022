@@ -17,6 +17,14 @@
         width: 90vw !important;
     }
 
+    thead tr th {
+        border-color: $gold;
+    }
+
+    tbody tr td {
+        border-color: $gold;
+    }
+
     tbody tr:not(.is-selected):hover {
         background-color: rgba($cream, 0.2) !important;
     }

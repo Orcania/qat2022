@@ -11,7 +11,12 @@ const fetchTime = async () => {
 };
 
 const useCountdown = unixMilliseconds => {
-    const [timeLeft, setTimeLeft] = useState({});
+    const [timeLeft, setTimeLeft] = useState({
+        D: '-',
+        H: '-',
+        M: '-',
+        S: '-',
+    });
     const [done, setDone] = useState(false);
     const [initialFetchedTime, setInitialFetchedTime] = useState(0);
 

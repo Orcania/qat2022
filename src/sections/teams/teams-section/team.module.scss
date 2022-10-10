@@ -1,0 +1,31 @@
+@import 'src/scss/vars';
+
+.flag_image {
+    // add shadow to the image
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
+}
+
+.flex_wrapper {
+    display: flex;
+    width: 70vw;
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    .div {
+        // width: 100%;
+        // max-width: 30%;
+        // margin-bottom: 2.5rem;
+    }
+}
+
+@media only screen and (max-width: 769px) {
+    .flex_wrapper {
+        width: 100% !important;
+    }
+    .div {
+        width: 100%;
+        max-width: 40% !important;
+        margin-bottom: 2.5rem;
+    }
+}
