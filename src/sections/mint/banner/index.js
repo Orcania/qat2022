@@ -5,9 +5,7 @@ import useCountdown from 'src/hooks/useCountdown';
 const BannerSection = () => {
     const [timeLeft, live] = useCountdown(1668902400000);
 
-    const onMintClick = () => {
-        console.log('minting');
-    };
+    const onMintClick = () => {};
 
     return (
         <section className="banner" style={{ minHeight: '100vh' }}>
