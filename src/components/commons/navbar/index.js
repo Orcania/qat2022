@@ -125,17 +125,19 @@ const Navbar = () => {
                     </div>
 
                     <div className="navbar-end">
-                        {socialMedia.map(item => (
-                            <a key={item.id} href={item.url} className="navbar-item" target="_blank" rel="noreferrer">
-                                <span className="icon is-size-4">{item.icon()}</span>
-                            </a>
-                        ))}
+                        <div className="navbar-item spc">
+                            {socialMedia.map(item => (
+                                <a key={item.id} href={item.url} target="_blank" rel="noreferrer" className="mx-4">
+                                    <span className="icon is-size-4">{item.icon()}</span>
+                                </a>
+                            ))}
+                        </div>
                         <ConnectedWrapper
                             disconnectedComponent={
                                 <div className="navbar-item">
                                     <button
                                         id="connect-button"
-                                        className="button  is-fullwidth is-rounded is-burgundy has-background-hpink-o-2 has-border-2-hpink-o-10 is-shadowless navbar-button "
+                                        className="button ccbtn is-fullwidth is-rounded is-burgundy has-background-hpink-o-2 has-border-2-hpink-o-10 is-shadowless navbar-button "
                                         type="button"
                                         onClick={handleOpenWalletsModal}
                                     >
@@ -146,7 +148,7 @@ const Navbar = () => {
                         >
                             <div className="navbar-item">
                                 <button
-                                    className="button  is-fullwidth is-burgundy address-button is-rounded navbar-button "
+                                    className="button ccbtn is-fullwidth is-burgundy address-button is-rounded navbar-button "
                                     type="button"
                                     onClick={handleOpenWalletAccountModal}
                                 >

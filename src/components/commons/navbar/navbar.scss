@@ -6,6 +6,8 @@
     .navbar-menu {
         .navbar-start {
             .navbar-item {
+                font-weight: 700;
+
                 &:hover {
                     background: rgba(0, 0, 0, 0) !important;
 
@@ -88,7 +90,7 @@
                 overflow: hidden;
 
                 .navbar-item {
-                    width: 100% !important;
+                    // width: 33 !important;
                 }
             }
         }
@@ -98,4 +100,13 @@
             border-radius: 10px !important;
         }
     }
+}
+
+.spc {
+    a {
+        color: $burgundy !important;
+    }
+
+    display: flex !important;
+    justify-content: center !important;
 }
