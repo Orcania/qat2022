@@ -17,8 +17,20 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'QatarBold';
+    src: url(../../public/media/fonts/Qatar2022-Bold.woff) format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
 .has-font-qatar {
     font-family: 'Qatar', sans-serif;
+    font-weight: 900 !important;
+}
+
+.has-font-qatar-bold {
+    font-family: 'QatarBold', sans-serif;
 }
 
 .has-font-qatar-arabic {

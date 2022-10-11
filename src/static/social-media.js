@@ -2,7 +2,7 @@ const data = [
     {
         id: 1,
         name: 'Twitter',
-        url: 'https://twitter.com',
+        url: 'https://twitter.com/WorldFantasyCup',
         icon: () => <i className="fab fa-twitter" />,
     },
     {

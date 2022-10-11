@@ -15,13 +15,8 @@ const data = [
         pctg: '2',
     },
     {
-        id: 4,
-        team_rank: '4',
-        pctg: '1',
-    },
-    {
         id: 5,
-        team_rank: '5',
+        team_rank: '4 & 5',
         pctg: '1',
     },
     {
@@ -76,7 +71,9 @@ const StructureSection = () => {
                                 <td className="subtitle has-text-centered has-text-gold has-font-qatar">
                                     {item.team_rank}
                                 </td>
-                                <td className="subtitle has-text-centered has-text-gold has-font-qatar">{item.pctg}</td>
+                                <td className="subtitle has-text-centered has-text-gold has-font-qatar">
+                                    {item.pctg}%
+                                </td>
                             </tr>
                         ))}
                     </tbody>

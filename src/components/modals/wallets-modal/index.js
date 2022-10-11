@@ -32,7 +32,7 @@ const WalletsModal = () => {
                     {wallets.map(wallet => (
                         <li className="py-2" key={wallet.id}>
                             <ConnectButton
-                                className="button is-fullwidth has-bg-hdark has-border-radius-8 is-borderless has-hover-animated-gradient is-clickable "
+                                className="button is-fullwidth has-bg-burgundy has-border-radius-8 is-borderless has-hover-animated-gradient is-clickable "
                                 providerType={wallet.provider}
                                 onSuccessCB={closeModal}
                                 onErrorCB={err => console.log(err)}

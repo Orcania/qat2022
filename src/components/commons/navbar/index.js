@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/control-has-associated-label */
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable jsx-a11y/interactive-supports-focus */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
@@ -134,23 +135,23 @@ const Navbar = () => {
                         </div>
                         <ConnectedWrapper
                             disconnectedComponent={
-                                <div className="navbar-item">
+                                <div className="navbar-item botoncito">
                                     <button
                                         id="connect-button"
-                                        className="button ccbtn is-fullwidth is-rounded is-burgundy has-background-hpink-o-2 has-border-2-hpink-o-10 is-shadowless navbar-button "
+                                        className="ccbutton navbar-button connbtn"
                                         type="button"
                                         onClick={handleOpenWalletsModal}
-                                    >
-                                        Connect Wallet
-                                    </button>
+                                        data-content="Connect"
+                                    />
                                 </div>
                             }
                         >
-                            <div className="navbar-item">
+                            <div className="navbar-item botoncito">
                                 <button
-                                    className="button ccbtn is-fullwidth is-burgundy address-button is-rounded navbar-button "
+                                    className="ccbutton navbar-button "
                                     type="button"
                                     onClick={handleOpenWalletAccountModal}
+                                    data-content={walletReducer.address && getAddressReduced(walletReducer.address)}
                                 >
                                     {walletReducer.address && getAddressReduced(walletReducer.address)}
                                 </button>

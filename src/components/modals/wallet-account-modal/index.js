@@ -81,10 +81,10 @@ const WalletAccountModal = () => {
         >
             <div>
                 {/* <div className={background} /> */}
-                <div className="box has-bg-hdark" style={{ position: 'relative' }}>
+                <div className="box has-bg-burgundy" style={{ position: 'relative' }}>
                     <div className="columns is-mobile" style={{ zIndex: '50' }}>
                         <div className="column is-narrow">
-                            <h1 className="subtitle has-text-white">
+                            <h1 className="subtitle has-text-white has-font-qatar">
                                 {walletReducer.address && getAddressReduced(walletReducer.address)}
                             </h1>
                         </div>
@@ -123,7 +123,7 @@ const WalletAccountModal = () => {
                     </div>
 
                     <div>
-                        <h1 className="subtitle is-5 has-text-hwhite">Balance</h1>
+                        <h1 className="subtitle is-5 has-text-cream">Balance</h1>
                         <h1 className="title has-text-white">
                             <span className=" has-font-ptmono">${BigNum2NormalNum(balance, 18, 5)}</span> ETH
                         </h1>
