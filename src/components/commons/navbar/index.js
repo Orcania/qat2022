@@ -101,25 +101,25 @@ const Navbar = () => {
                 <div className={`navbar-menu ${mobileActive ? 'is-active' : ''}`}>
                     <div className="navbar-start">
                         <Link href="/mint">
-                            <a className="navbar-item " onClick={handleNavbarItemClick} role="button">
+                            <a className="navbar-item has-font-qatar" onClick={handleNavbarItemClick} role="button">
                                 <span> Home</span>
                             </a>
                         </Link>
 
                         <Link href="/teams">
-                            <a className="navbar-item " onClick={handleNavbarItemClick} role="button">
+                            <a className="navbar-item has-font-qatar" onClick={handleNavbarItemClick} role="button">
                                 <span> Teams</span>
                             </a>
                         </Link>
 
                         <Link href="/howto">
-                            <a className="navbar-item " onClick={handleNavbarItemClick} role="button">
+                            <a className="navbar-item has-font-qatar" onClick={handleNavbarItemClick} role="button">
                                 <span> How To</span>
                             </a>
                         </Link>
 
                         <Link href="/var">
-                            <a className="navbar-item " onClick={handleNavbarItemClick} role="button">
+                            <a className="navbar-item has-font-qatar" onClick={handleNavbarItemClick} role="button">
                                 <span> VAR</span>
                             </a>
                         </Link>

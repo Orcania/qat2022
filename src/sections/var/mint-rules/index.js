@@ -10,8 +10,9 @@ const MintRulesSection = () => {
                 <br />
                 World Fantasy Cup&apos;s supply is uncapped and illimited.
                 <br />
-                The Mint Price is 0.05 ETH per NFT before the start of the official World Cup, and 0.1 ETH after the
-                start of the official World Cup
+                <br />
+                The Mint Price is 0.05 ETH per NFT before the start of the official World Cup,
+                <br /> and 0.1 ETH after the start of the official World Cup
             </p>
         </section>
     );
