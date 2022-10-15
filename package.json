@@ -17,7 +17,6 @@
     "@celeste-js/store": "^2.3.0",
     "bignumber.js": "^9.1.0",
     "bulma": "^0.9.4",
-    "html-to-text": "^8.2.1",
     "next": "^12.2.0",
     "node-sass": "^7.0.1",
     "primeflex": "^3.2.1",
