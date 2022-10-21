@@ -19,11 +19,14 @@ const useCountdown = unixMilliseconds => {
     });
     const [done, setDone] = useState(false);
     const [initialFetchedTime, setInitialFetchedTime] = useState(0);
+    const [called, setCalled] = useState(false);
 
     useEffect(() => {
         const interval = setInterval(async () => {
-            const now = initialFetchedTime === 0 ? await fetchTime() : initialFetchedTime + 1000;
+            const now = !called ? await fetchTime() : initialFetchedTime + 1000;
             setInitialFetchedTime(now);
+
+            if (!called) setCalled(true);
 
             const distance = unixMilliseconds - now;
 
