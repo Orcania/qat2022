@@ -123,6 +123,11 @@ const Navbar = () => {
                                 <span> VAR</span>
                             </a>
                         </Link>
+                        <Link href="/faq">
+                            <a className="navbar-item has-font-qatar" onClick={handleNavbarItemClick} role="button">
+                                <span> FAQ</span>
+                            </a>
+                        </Link>
                     </div>
 
                     <div className="navbar-end">

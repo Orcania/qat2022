@@ -10,6 +10,8 @@ const fetchTime = async () => {
     }
 };
 
+let now = 0;
+
 const useCountdown = unixMilliseconds => {
     const [timeLeft, setTimeLeft] = useState({
         D: '-',
@@ -18,13 +20,11 @@ const useCountdown = unixMilliseconds => {
         S: '-',
     });
     const [done, setDone] = useState(false);
-    const [initialFetchedTime, setInitialFetchedTime] = useState(0);
     const [called, setCalled] = useState(false);
 
     useEffect(() => {
         const interval = setInterval(async () => {
-            const now = !called ? await fetchTime() : initialFetchedTime + 1000;
-            setInitialFetchedTime(now);
+            now = !called ? await fetchTime() : now + 1000;
 
             if (!called) setCalled(true);
 

@@ -1,4 +1,4 @@
-const ScoringSection = () => {
+const PointsSection = () => {
     return (
         <section className="px-2" style={{ marginBottom: '5rem' }}>
             <h1 className="cooltitle has-text-centered has-font-qatar mb-6">Points</h1>
@@ -25,4 +25,4 @@ const ScoringSection = () => {
     );
 };
 
-export default ScoringSection;
+export default PointsSection;

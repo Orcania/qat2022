@@ -71,7 +71,7 @@ const data = [
 
 const ExampleSection = () => {
     return (
-        <section className="px-2">
+        <section className="px-2 mb-6">
             <h1 className="cooltitle has-text-centered has-font-qatar mb-6">Example</h1>
             <div>
                 <div className="columns">
