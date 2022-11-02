@@ -23,7 +23,7 @@ const Footer = () => {
                         ))}
                     </div>
                     <h1 className="subtitle is-6 has-text-centered has-text-burgundy has-font-qatar">
-                        © 2022 World Cup Fantasy – All Rights Reserved
+                        © 2022 World Fantasy Cup – All Rights Reserved
                     </h1>
                 </div>
             </div>

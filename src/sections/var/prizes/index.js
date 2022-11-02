@@ -6,6 +6,9 @@ const PrizesSection = () => {
                 World Fantasy Cup&apos;s prizes will be distributed 24 hours after the final whistle of the
                 <br />
                 FIFA World Cup Final game.
+                <br />
+                <br />
+                &apos;The prizes&apos; $ value will be equivalent to the mint percentage listed in the structure below
             </p>
         </section>
     );

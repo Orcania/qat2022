@@ -112,9 +112,9 @@ const Navbar = () => {
                             </a>
                         </Link>
 
-                        <Link href="/howto">
+                        <Link href="/scoring">
                             <a className="navbar-item has-font-qatar" onClick={handleNavbarItemClick} role="button">
-                                <span> How To</span>
+                                <span> Scoring</span>
                             </a>
                         </Link>
 

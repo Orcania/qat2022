@@ -8,7 +8,7 @@ const MintRulesSection = () => {
                 World Cup Qatar 2022.
                 <br />
                 <br />
-                World Fantasy Cup&apos;s supply is uncapped and illimited.
+                World Fantasy Cup&apos;s supply is capped to 100,000 NFT Teams.
                 <br />
                 <br />
                 The Mint Price is 0.05 ETH per NFT before the start of the official World Cup,

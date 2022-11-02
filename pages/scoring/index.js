@@ -6,7 +6,7 @@ import ScoreBanner from 'src/sections/howto/banner';
 import ScoringSection from 'src/sections/howto/scoring-section';
 import ExampleSection from 'src/sections/howto/example';
 
-const HowtoPage = () => {
+const ScoringPage = () => {
     return (
         <div className="" style={{ minHeight: '100vh' }}>
             <ScoreBanner />
@@ -16,6 +16,6 @@ const HowtoPage = () => {
     );
 };
 
-HowtoPage.getLayout = page => getPageTitleLayout(getMainLayout(getSectionLayout(page, 'How to')), 'How to');
+ScoringPage.getLayout = page => getPageTitleLayout(getMainLayout(getSectionLayout(page, 'Scoring')), 'Scoring');
 
-export default HowtoPage;
+export default ScoringPage;

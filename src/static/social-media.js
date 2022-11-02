@@ -8,7 +8,7 @@ const data = [
     {
         id: 2,
         name: 'Discord',
-        url: 'https://discord.com',
+        url: 'https://discord.com/invite/zK5Zr7ExFu',
         icon: () => <i className="fab fa-discord" />,
     },
     {

@@ -48,7 +48,7 @@ const MintModal = () => {
     return (
         <Dialog
             visible={mintModal.isOpen}
-            header="Your NFT is being minted"
+            header="Your Team is Being Assembled"
             onHide={closeModal}
             draggable={false}
             className="resize-manager has-font-qatar"
