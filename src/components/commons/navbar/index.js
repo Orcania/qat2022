@@ -100,32 +100,33 @@ const Navbar = () => {
 
                 <div className={`navbar-menu ${mobileActive ? 'is-active' : ''}`}>
                     <div className="navbar-start">
-                        <Link href="/mint">
+                        <Link href="/home">
                             <a className="navbar-item has-font-qatar" onClick={handleNavbarItemClick} role="button">
                                 <span> Home</span>
                             </a>
                         </Link>
 
-                        <Link href="/teams">
+                        <Link href="/howitworks">
                             <a className="navbar-item has-font-qatar" onClick={handleNavbarItemClick} role="button">
-                                <span> Teams</span>
+                                <span> How it works</span>
                             </a>
                         </Link>
 
-                        <Link href="/scoring">
+                        <Link href="/aboutus">
                             <a className="navbar-item has-font-qatar" onClick={handleNavbarItemClick} role="button">
-                                <span> Scoring</span>
+                                <span> About us</span>
+                            </a>
+                        </Link>
+
+                        <Link href="/roadmap">
+                            <a className="navbar-item has-font-qatar" onClick={handleNavbarItemClick} role="button">
+                                <span> Roadmap</span>
                             </a>
                         </Link>
 
                         <Link href="/var">
                             <a className="navbar-item has-font-qatar" onClick={handleNavbarItemClick} role="button">
                                 <span> VAR</span>
-                            </a>
-                        </Link>
-                        <Link href="/faq">
-                            <a className="navbar-item has-font-qatar" onClick={handleNavbarItemClick} role="button">
-                                <span> FAQ</span>
                             </a>
                         </Link>
                     </div>

@@ -19,6 +19,6 @@ const FaqPage = () => {
     );
 };
 
-FaqPage.getLayout = page => getPageTitleLayout(getMainLayout(getSectionLayout(page, 'FAQ')), 'FAQ');
+FaqPage.getLayout = page => getPageTitleLayout(getMainLayout(getSectionLayout(page, 'Roadmap')), 'Roadmap');
 
 export default FaqPage;

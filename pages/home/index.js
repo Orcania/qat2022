@@ -11,6 +11,6 @@ const MintPage = () => {
     );
 };
 
-MintPage.getLayout = page => getPageTitleLayout(getMainLayout(page), 'Mint');
+MintPage.getLayout = page => getPageTitleLayout(getMainLayout(page), 'Home');
 
 export default MintPage;
