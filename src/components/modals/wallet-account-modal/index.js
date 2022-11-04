@@ -123,14 +123,14 @@ const WalletAccountModal = () => {
                     </div>
 
                     <div>
-                        <h1 className="subtitle is-5 has-text-cream">Balance</h1>
+                        <h1 className="subtitle is-5 has-text-white">Balance</h1>
                         <h1 className="title has-text-white">
                             <span className=" has-font-ptmono">${BigNum2NormalNum(balance, 18, 5)}</span> ETH
                         </h1>
                     </div>
                 </div>
 
-                <hr className="has-background-hw-o-3" />
+                {/* <hr className="has-background-hw-o-3" /> */}
 
                 {/* <div>
                                         <h1 className="subtitle is-5 has-text-hw-o-8 has-text-centered">

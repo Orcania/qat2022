@@ -8,7 +8,7 @@ const teamData = [
                 href="https://twitter.com/theblesseds0n?s"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="has-text-cream is-size-3"
+                className="has-text-white is-size-3"
             >
                 <span className="icon">
                     <i className="fab fa-twitter" />
@@ -36,7 +36,7 @@ const teamData = [
                 href="https://www.linkedin.com/in/timmangnall"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="has-text-cream is-size-3"
+                className="has-text-white is-size-3"
             >
                 <span className="icon">
                     <i className="fab fa-linkedin" />
@@ -68,7 +68,7 @@ const teamData = [
                 href="http://www.sportinglabs.io/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="has-text-cream is-size-3"
+                className="has-text-white is-size-3"
             >
                 <span className="icon">
                     <i className="fa-regular fa-globe" />
@@ -95,7 +95,7 @@ const teamData = [
                 href="https://capitalblock.io/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="has-text-cream is-size-3"
+                className="has-text-white is-size-3"
             >
                 <span className="icon">
                     <i className="fa-regular fa-globe" />
@@ -122,7 +122,7 @@ const teamData = [
                 href="https://www.orcania.io/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="has-text-cream is-size-3"
+                className="has-text-white is-size-3"
             >
                 <span className="icon">
                     <i className="fa-regular fa-globe" />
