@@ -1,7 +1,7 @@
 @import './vars';
 
-$bg-color: $ww;
+$bg-color: white;
 
 *::selection {
-    background: rgba($bg-color, 0.5);
+    // background: rgba($bg-color, 0.5);
 }

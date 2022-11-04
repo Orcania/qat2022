@@ -13,3 +13,12 @@ export const BigNum2NormalNum = (num, decimals = 18, decimalPlaces = 18) => {
         .toFixed(decimalPlaces)
         .toString();
 };
+
+export const formatNumber = value => {
+    return Number(value).toLocaleString('en-US', {
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 18,
+    });
+};
+
+export const reduceHash = (hash, amount = 4) => `${hash.slice(0, amount + 2)}...${hash.slice(-amount)}`;

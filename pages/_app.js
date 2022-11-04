@@ -24,6 +24,7 @@ const { appName } = appConfig;
 
 function MyApp({ Component, pageProps }) {
     const getLayout = Component.getLayout || (page => page);
+    const getDecorators = Component.getDecorators || (c => c);
     return (
         <>
             <Head>
@@ -39,7 +40,7 @@ function MyApp({ Component, pageProps }) {
                     <WalletsModal />
                     <WalletAccountModal />
                     <MintModal />
-                    {getLayout(<Component {...pageProps} />)}
+                    {getDecorators(getLayout(<Component {...pageProps} />))}
                 </Provider>
             </CelesteProvider>
         </>
