@@ -1,15 +1,16 @@
 /* eslint-disable @next/next/no-img-element */
 import styles from './logo.module.scss';
 
-const { logo } = styles;
+const { logo, title, img } = styles;
 
 const LogoComponent = () => {
     return (
         <div className={`is-flex is-align-items-center ${logo}`}>
-            <img src="/media/logo.png" alt="" width="100px" />
-            <div className="has-text-left" style={{ position: 'relative', top: '-15px' }}>
-                <h1 className="title is-4 has-text-cream has-font-qatar-bold mb-0">World Fantasy Cup</h1>
-                <h1 className="title has-text-cream has-font-qatar-bold has-text-centered">QAT2022</h1>
+            <img src="/media/logo.png" alt="" width="150px" id={img} />
+            <div className="has-text-left" style={{ position: 'relative' }}>
+                <h1 className={`title is-1 has-text-ww has-font-akira mb-0 ${title}`}>
+                    WORLD <br /> FANTASY <br /> CUP
+                </h1>
             </div>
         </div>
     );

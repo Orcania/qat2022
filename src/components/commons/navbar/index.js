@@ -68,25 +68,23 @@ const Navbar = () => {
 
     return (
         <nav
-            className={`navbar custom-navbar is-fixed-top has-bg-cream ${bgColor ? 'has-navbar-bg-color' : ''} 
+            className={`navbar custom-navbar is-fixed-top has-bg-darkgrey ${bgColor ? 'has-navbar-bg-color' : ''} 
             ${scrollingDown ? 'is-hidden-up' : ''}`}
             role="navigation"
             aria-label="main navigation"
         >
             <div className="container">
                 <div className="navbar-brand  py-2">
-                    {/* <a
-                    href="https://www.chaoticdjs.com/"
-                    className="navbar-item"
-                    onClick={handleNavbarItemClick}
-                    role="button"
-                >
-                    <img src="./media/logo.png" width="120" alt="" />
-                </a> */}
+                    <Link href="/">
+                        <a className="navbar-item is-hidden-desktop" onClick={handleNavbarItemClick} role="button">
+                            {/* <img src="./media/logo.png" width="120" alt="" /> */}
+                            <h1 className="title is-4 has-text-white has-font-akira">W F C</h1>
+                        </a>
+                    </Link>
 
                     <a
                         role="button"
-                        className={`navbar-burger  ${burgerActive ? 'is-active' : ''}`}
+                        className={`navbar-burger  ${burgerActive ? 'is-active' : ''} has-text-white`}
                         aria-label="menu"
                         aria-expanded="false"
                         data-target="navbarBasicExample"
@@ -101,32 +99,62 @@ const Navbar = () => {
                 <div className={`navbar-menu ${mobileActive ? 'is-active' : ''}`}>
                     <div className="navbar-start">
                         <Link href="/home">
-                            <a className="navbar-item has-font-qatar" onClick={handleNavbarItemClick} role="button">
+                            <a
+                                className="navbar-item has-font-montserrat"
+                                onClick={handleNavbarItemClick}
+                                role="button"
+                            >
                                 <span> Home</span>
                             </a>
                         </Link>
 
                         <Link href="/howitworks">
-                            <a className="navbar-item has-font-qatar" onClick={handleNavbarItemClick} role="button">
+                            <a
+                                className="navbar-item has-font-montserrat"
+                                onClick={handleNavbarItemClick}
+                                role="button"
+                            >
                                 <span> How it works</span>
                             </a>
                         </Link>
 
                         <Link href="/aboutus">
-                            <a className="navbar-item has-font-qatar" onClick={handleNavbarItemClick} role="button">
+                            <a
+                                className="navbar-item has-font-montserrat"
+                                onClick={handleNavbarItemClick}
+                                role="button"
+                            >
                                 <span> About us</span>
                             </a>
                         </Link>
 
                         <Link href="/roadmap">
-                            <a className="navbar-item has-font-qatar" onClick={handleNavbarItemClick} role="button">
+                            <a
+                                className="navbar-item has-font-montserrat"
+                                onClick={handleNavbarItemClick}
+                                role="button"
+                            >
                                 <span> Roadmap</span>
                             </a>
                         </Link>
 
                         <Link href="/var">
-                            <a className="navbar-item has-font-qatar" onClick={handleNavbarItemClick} role="button">
+                            <a
+                                className="navbar-item has-font-montserrat"
+                                onClick={handleNavbarItemClick}
+                                role="button"
+                            >
                                 <span> VAR</span>
+                            </a>
+                        </Link>
+
+                        <Link href="/rarity">
+                            <a
+                                className="navbar-item has-font-montserrat"
+                                onClick={handleNavbarItemClick}
+                                role="button"
+                            >
+                                <span> Rarity</span>
                             </a>
                         </Link>
                     </div>
@@ -158,9 +186,7 @@ const Navbar = () => {
                                     type="button"
                                     onClick={handleOpenWalletAccountModal}
                                     data-content={walletReducer.address && getAddressReduced(walletReducer.address)}
-                                >
-                                    {walletReducer.address && getAddressReduced(walletReducer.address)}
-                                </button>
+                                />
                             </div>
                         </ConnectedWrapper>
                     </div>

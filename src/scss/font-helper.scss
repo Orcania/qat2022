@@ -4,8 +4,8 @@
 
 // define font and import
 @font-face {
-    font-family: 'Qatar';
-    src: url(/media/fonts/Qatar2022Arabic-Medium.woff) format('woff');
+    font-family: 'Akira';
+    src: url(/media/fonts/Akira.woff) format('woff');
     font-weight: 400;
     font-style: normal;
 }
@@ -24,16 +24,16 @@
     font-style: normal;
 }
 
-.has-font-qatar {
-    font-family: 'Qatar', sans-serif;
-    font-weight: 900 !important;
+.has-font-akira {
+    font-family: 'Akira', sans-serif;
+    font-weight: 400 !important;
 }
 
-.has-font-qatar-bold {
+.has-font-qatar-baold {
     font-family: 'QatarBold', sans-serif;
 }
 
-.has-font-qatar-arabic {
+.has-font-qatar-araabic {
     font-family: 'QatarArabic', sans-serif;
 }
 
@@ -43,7 +43,7 @@
 
 .has-font-montserrat {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
+    font-weight: 400;
 }
 
 .has-font-ptmono {

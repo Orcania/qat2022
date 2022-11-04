@@ -5,7 +5,7 @@ import BannerSection from 'src/sections/mint/banner';
 
 const MintPage = () => {
     return (
-        <div className="has-bg-burgundy" style={{ minHeight: '100vh' }}>
+        <div className="has-bg-burgundy " style={{ minHeight: '100vh', paddingTop: '6rem' }}>
             <BannerSection />
         </div>
     );
