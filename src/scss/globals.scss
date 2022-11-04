@@ -6,8 +6,8 @@
 @import 'react-toastify/dist/ReactToastify.css';
 
 @import '../components/commons/navbar/navbar.scss';
-@import '../../pages/mint/mint.scss';
-@import '../../pages/scoring/how.scss';
+@import '../../pages/home/home.scss';
+@import '../../pages/howitworks/how.scss';
 
 .mint-button {
     background: none !important;
@@ -79,6 +79,16 @@
     background-position: center center;
     background-size: contain;
     font-size: 1.5rem;
+    padding: 1rem 1rem;
+    color: $burgundy;
+}
+
+.cooltitle3 {
+    background-image: url(/media/button_cream.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    font-size: 1rem;
     padding: 1rem 1rem;
     color: $burgundy;
 }
