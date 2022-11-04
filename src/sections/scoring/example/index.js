@@ -72,7 +72,7 @@ const data = [
 const ExampleSection = () => {
     return (
         <section className="px-2 mb-6">
-            <h1 className="cooltitle has-text-centered has-font-qatar mb-6">Example</h1>
+            <h1 className="cooltitle2 has-text-centered has-font-akira mb-6">Example</h1>
             <div>
                 <div className="columns">
                     <div className="column">
@@ -97,13 +97,13 @@ const ExampleSection = () => {
                                 <tbody>
                                     {data.map(item => (
                                         <tr key={item.id}>
-                                            <td className="subtitle has-text-centered has-text-cream has-font-qatar">
+                                            <td className="subtitle has-text-centered has-text-white has-font-qatar">
                                                 {item.name}
                                             </td>
-                                            <td className="subtitle has-text-centered has-text-cream has-font-qatar">
+                                            <td className="subtitle has-text-centered has-text-white has-font-qatar">
                                                 {item.status}
                                             </td>
-                                            <td className="subtitle has-text-centered has-text-cream has-font-qatar">
+                                            <td className="subtitle has-text-centered has-text-white has-font-qatar">
                                                 {item.points}
                                             </td>
                                         </tr>

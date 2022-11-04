@@ -84,11 +84,21 @@
 }
 
 .cooltitle3 {
-    background-image: url(/media/button_cream.png);
+    background-image: url(/media/button_c.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
     font-size: 1rem;
+    padding: 1rem 1rem;
+    color: $burgundy;
+}
+
+.cooltitle4 {
+    background-image: url(/media/button_c.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    font-size: 0.75rem;
     padding: 1rem 1rem;
     color: $burgundy;
 }

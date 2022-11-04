@@ -12,6 +12,6 @@ const TeamsPage = () => {
     );
 };
 
-TeamsPage.getLayout = page => getPageTitleLayout(getMainLayout(getSectionLayout(page, 'Teams')), 'Teams');
+TeamsPage.getLayout = page => getPageTitleLayout(getMainLayout(getSectionLayout(page, 'Rarity')), 'Rarity');
 
 export default TeamsPage;
