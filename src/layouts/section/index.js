@@ -10,7 +10,7 @@ const SectionLayout = ({ children, name }) => {
                 <div className={`mb-6 ${header}`}>
                     <Logo />
                     <div className={sectiontitle}>
-                        <h1 className="maintitle title has-text-cream has-font-qatar">{name}</h1>
+                        <h1 className="maintitle title has-text-white has-font-akira">{name}</h1>
                     </div>
                 </div>
                 <div>{children}</div>
