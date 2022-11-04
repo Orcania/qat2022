@@ -1,3 +1,5 @@
+const mintAbi = require('./src/static/abi/mint.json');
+
 module.exports = {
     isMultichain: false,
     rpcs: {
@@ -7,8 +9,15 @@ module.exports = {
             explorer: 'https://etherscan.io',
         },
     },
-    smartContracts: [],
+    smartContracts: [
+        {
+            key: 'MINT',
+            abi: mintAbi,
+            address: '0x5B82d07C41b0d8c812BF1CD6A7232dFEF67203d2',
+        },
+    ],
     addressBook: {
         ZERO: '0x0000000000000000000000000000000000000000',
+        MINT: '0x5B82d07C41b0d8c812BF1CD6A7232dFEF67203d2',
     },
 };

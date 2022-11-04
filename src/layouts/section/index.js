@@ -6,7 +6,7 @@ const { header, sectiontitle } = styles;
 const SectionLayout = ({ children, name }) => {
     return (
         <div className="py-6 has-bg-burgundy">
-            <div className="container">
+            <div className="container px-5">
                 <div className={`mb-6 ${header}`}>
                     <Logo />
                     <div className={sectiontitle}>

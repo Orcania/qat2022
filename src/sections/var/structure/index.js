@@ -59,8 +59,8 @@ const StructureSection = () => {
                 <table className="cooltable2 table is-fullwidth is-hoverable has-bg-burgundy" style={{ width: '40vw' }}>
                     <thead>
                         <tr>
-                            <th className="subtitle has-text-centered has-text-gold has-font-qatar is-4">Team Rank</th>
-                            <th className="subtitle has-text-centered has-text-gold has-font-qatar is-4">
+                            <th className="subtitle has-text-centered has-text-white has-font-qatar is-4">Team Rank</th>
+                            <th className="subtitle has-text-centered has-text-white has-font-qatar is-4">
                                 Mint % per Team
                             </th>
                         </tr>
@@ -68,10 +68,10 @@ const StructureSection = () => {
                     <tbody>
                         {data.map(item => (
                             <tr key={item.id}>
-                                <td className="subtitle has-text-centered has-text-gold has-font-qatar">
+                                <td className="subtitle has-text-centered has-text-white has-font-qatar">
                                     {item.team_rank}
                                 </td>
-                                <td className="subtitle has-text-centered has-text-gold has-font-qatar">
+                                <td className="subtitle has-text-centered has-text-white has-font-qatar">
                                     {item.pctg}%
                                 </td>
                             </tr>

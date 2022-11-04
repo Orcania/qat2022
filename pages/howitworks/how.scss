@@ -18,11 +18,11 @@
     }
 
     thead tr th {
-        border-color: $gold;
+        border-color: rgba($ww, 0.25);
     }
 
     tbody tr td {
-        border-color: $gold;
+        border-color: rgba($ww, 0.25);
     }
 
     tbody tr:not(.is-selected):hover {
@@ -31,7 +31,7 @@
 
     tbody tr:last-child {
         td {
-            color: $gold !important;
+            color: $ww !important;
             // font-size: 1.5rem;
         }
     }

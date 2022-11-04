@@ -62,7 +62,7 @@ const teamData = [
     {
         id: 3,
         name: 'Sporting Labs',
-        img: '/media/team/3.jpg',
+        img: '/media/team/4.png',
         logo: () => (
             <a
                 href="http://www.sportinglabs.io/"
@@ -89,7 +89,7 @@ const teamData = [
     {
         id: 4,
         name: 'Block Capital',
-        img: '/media/team/4.png',
+        img: '/media/team/3.jpg',
         logo: () => (
             <a
                 href="https://capitalblock.io/"

@@ -10,7 +10,10 @@ const FaqPage = () => {
             <div className="container">
                 {faqData.map(item => (
                     <section className="px-2" style={{ marginBottom: '5rem' }} key={item.id}>
-                        <h1 className="cooltitle2 has-text-centered has-font-qatar mb-6">{item.question}</h1>
+                        <h1 className="cooltitle4 has-text-centered has-font-akira mb-6">
+                            {item.question}
+                            <br />
+                        </h1>
                         {item.ansComponent()}
                     </section>
                 ))}

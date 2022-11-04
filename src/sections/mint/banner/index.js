@@ -1,21 +1,21 @@
 /* eslint-disable @next/next/no-img-element */
-// import { useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 import Logo from 'src/components/commons/logo';
 
 import useCountdown from 'src/hooks/useCountdown';
 
-// import { open_modal } from 'src/redux/actions';
+import { open_modal } from 'src/redux/actions';
 
-// import modals from 'src/static/app.modals';
+import modals from 'src/static/app.modals';
 
 const BannerSection = () => {
-    // const dispath = useDispatch();
+    const dispath = useDispatch();
 
     const [timeLeft, live] = useCountdown(1668902400000);
 
     const onMintClick = () => {
-        // dispath(open_modal({ modalName: modals.MINTMODAL }));
+        dispath(open_modal({ modalName: modals.MINTMODAL }));
     };
 
     return (

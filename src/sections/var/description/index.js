@@ -24,8 +24,8 @@ const ReadMore = ({ text }) => {
 const DescriptionSection = () => {
     return (
         <section className="px-2" style={{ marginBottom: '5rem' }}>
-            <h1 className="cooltitle2 has-text-centered has-font-qatar mb-6">Description</h1>
-            <p className="has-text-cream has-font-qatar is-size-5 has-text-centered">
+            <h1 className="cooltitle4 has-text-centered has-font-akira mb-6">Description</h1>
+            <p className="has-text-white  is-size-5 has-text-centered">
                 <ReadMore
                     text={`
                         World Fantasy Cup is a play-2-win NFT project, tailored specifically for all passionate \n \n
