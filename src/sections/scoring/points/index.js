@@ -22,8 +22,6 @@ const PointsSection = () => {
                         </li>
                     </ol>
                     <br />
-                    <br />
-                    Welcome to the Fantasy!
                 </div>
             </p>
         </section>

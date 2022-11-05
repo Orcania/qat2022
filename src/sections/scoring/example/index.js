@@ -73,9 +73,11 @@ const ExampleSection = () => {
     return (
         <section className="px-5 mb-6">
             <h1 className="cooltitle2 has-text-centered has-font-akira mb-6">Example</h1>
+            <br />
+            <br />
             <div>
-                <div className="columns">
-                    <div className="column is-5">
+                <div className="columns is-vcentered">
+                    <div className="column ">
                         <img src="/media/team_ex.png" alt="" />
                     </div>
                     <div className="column">
@@ -83,14 +85,14 @@ const ExampleSection = () => {
                             <table className="cooltable2 table is-fullwidth is-hoverable has-bg-burgundy">
                                 <thead>
                                     <tr>
-                                        <th className="subtitle has-text-centered has-text-gold has-font-qatar is-4">
-                                            Player from
+                                        <th className="subtitle has-text-centered has-text-white has-font-qatar is-4">
+                                            <b>Player from</b>
                                         </th>
-                                        <th className="subtitle has-text-centered has-text-gold has-font-qatar is-4">
-                                            Game Status
+                                        <th className="subtitle has-text-centered has-text-white has-font-qatar is-4">
+                                            <b>Game Status</b>
                                         </th>
-                                        <th className="subtitle has-text-centered has-text-gold has-font-qatar is-4">
-                                            Points
+                                        <th className="subtitle has-text-centered has-text-white has-font-qatar is-4">
+                                            <b>Points</b>
                                         </th>
                                     </tr>
                                 </thead>

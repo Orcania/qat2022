@@ -10,15 +10,30 @@ import RulesSection from 'src/sections/scoring/rules';
 const ScoringPage = () => {
     return (
         <div className="" style={{ minHeight: '100vh' }}>
+            <br />
+            <br />
+            <br />
+            <br />
             <ScoreBanner />
             <PointsSection />
             <ExampleSection />
+            <br />
+            <br />
             <RulesSection />
         </div>
     );
 };
 
 ScoringPage.getLayout = page =>
-    getPageTitleLayout(getMainLayout(getSectionLayout(page, 'How it works')), 'How it works');
+    getPageTitleLayout(
+        getMainLayout(
+            getSectionLayout(page, () => (
+                <span className="ignore-font">
+                    How it <br /> works
+                </span>
+            ))
+        ),
+        'How it works'
+    );
 
 export default ScoringPage;

@@ -88,7 +88,7 @@ const teamData = [
     },
     {
         id: 4,
-        name: 'Block Capital',
+        name: 'Capital Block',
         img: '/media/team/3.jpg',
         logo: () => (
             <a

@@ -10,11 +10,9 @@ const RulesSection = () => {
                 <br />
                 <br />
                 <div className="is-flex is-justify-content-center">
-                    <p className="has-text-justified" style={{ width: '80%' }}>
+                    <p className="has-text-justified" style={{ width: '90%' }}>
                         In case 2 or more teams end up having the same total number of points, we will differentiate
-                        between
-                        <br />
-                        them with the following rules:
+                        between them with the following rules:
                         <br />
                         <br />
                         <ol>
@@ -29,15 +27,15 @@ const RulesSection = () => {
                             <li className="pb-3">Clean Play: The NFT Team with the lowest number of yellow cards.</li>
                             <li className="pb-3">
                                 Players Performance, ranked as follows:
-                                <ol type="a" className="ml-6">
-                                    <li className="pb-3">
+                                <ol type="a" className="ml-6 pt-4">
+                                    <li>
                                         Best Forwards: Total number of goals scored by the forwards of the NFT Team.
                                     </li>
-                                    <li className="pb-3">
+                                    <li>
                                         Best Goalkeeper: Lowest number of goals received by the Goalkeeper of the NFT
                                         Team.
                                     </li>
-                                    <li className="pb-3">
+                                    <li>
                                         Best Defenders: Lowest total number of goals received by the Defenders of the
                                         NFT Team.
                                     </li>

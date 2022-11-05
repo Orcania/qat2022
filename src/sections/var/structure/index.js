@@ -2,17 +2,17 @@ const data = [
     {
         id: 1,
         team_rank: '1',
-        pctg: '5',
+        pctg: '3',
     },
     {
         id: 2,
         team_rank: '2',
-        pctg: '3',
+        pctg: '2',
     },
     {
         id: 3,
         team_rank: '3',
-        pctg: '2',
+        pctg: '1.5',
     },
     {
         id: 5,
@@ -44,24 +44,21 @@ const data = [
         team_rank: '101 to 500',
         pctg: '0.02',
     },
-    {
-        id: 11,
-        team_rank: '501 to 1000',
-        pctg: '0.01',
-    },
 ];
 
 const StructureSection = () => {
     return (
         <section className="px-2" style={{ marginBottom: '5rem' }}>
-            <h1 className="cooltitle3 has-text-centered has-font-akira mb-6">Structure</h1>
+            <h1 className="cooltitle3 has-text-centered has-font-akira mb-6 p-5">Structure</h1>
             <div className="is-flex is-justify-content-center">
                 <table className="cooltable2 table is-fullwidth is-hoverable has-bg-burgundy" style={{ width: '40vw' }}>
                     <thead>
                         <tr>
-                            <th className="subtitle has-text-centered has-text-white has-font-qatar is-4">Team Rank</th>
                             <th className="subtitle has-text-centered has-text-white has-font-qatar is-4">
-                                Mint % per Team
+                                <b>Team Rank</b>
+                            </th>
+                            <th className="subtitle has-text-centered has-text-white has-font-qatar is-4">
+                                <b> Mint % per Team</b>
                             </th>
                         </tr>
                     </thead>
@@ -69,7 +66,7 @@ const StructureSection = () => {
                         {data.map(item => (
                             <tr key={item.id}>
                                 <td className="subtitle has-text-centered has-text-white has-font-qatar">
-                                    {item.team_rank}
+                                    <b>{item.team_rank}</b>
                                 </td>
                                 <td className="subtitle has-text-centered has-text-white has-font-qatar">
                                     {item.pctg}%

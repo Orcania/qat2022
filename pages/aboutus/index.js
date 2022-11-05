@@ -7,6 +7,8 @@ import TeamSection from 'src/sections/aboutus/team';
 const AboutusPage = () => {
     return (
         <div style={{ minHeight: '100vh' }}>
+            <br />
+            <br />
             <TeamSection />
         </div>
     );

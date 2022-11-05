@@ -1,7 +1,7 @@
 const MintRulesSection = () => {
     return (
-        <section className="px-2" style={{ marginBottom: '5rem' }}>
-            <h1 className="cooltitle3 has-text-centered has-font-akira mb-6">Mint Rules</h1>
+        <section className="px-2" style={{ marginBottom: '8rem' }}>
+            <h1 className="cooltitle3 has-text-centered has-font-akira mb-6 p-5">Mint Rules</h1>
             <p className="has-text-white  is-size-5 has-text-centered">
                 World Fantasy Cup&apos;s mint will stay open till the final whistle of the Official FIFA
                 <br />

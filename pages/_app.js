@@ -9,6 +9,7 @@ import WalletsModal from 'src/components/modals/wallets-modal';
 import WalletAccountModal from 'src/components/modals/wallet-account-modal';
 import MintModal from 'src/components/modals/mint';
 import WhileMintModal from 'src/components/modals/while-mint';
+import MintNotStartedYetModal from 'src/components/modals/mint-not-started-yet';
 
 import { ToastContainer } from 'react-toastify';
 
@@ -42,6 +43,7 @@ function MyApp({ Component, pageProps }) {
                     <WalletAccountModal />
                     <MintModal />
                     <WhileMintModal />
+                    <MintNotStartedYetModal />
                     {getDecorators(getLayout(<Component {...pageProps} />))}
                 </Provider>
             </CelesteProvider>

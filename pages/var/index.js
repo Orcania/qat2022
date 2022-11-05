@@ -11,6 +11,9 @@ import StructureSection from 'src/sections/var/structure';
 const VarPage = () => {
     return (
         <div style={{ minHeight: '100vh' }}>
+            <br />
+            <br />
+            <br />
             <ClasificationSection />
             <MintRulesSection />
             <DescriptionSection />
@@ -20,6 +23,6 @@ const VarPage = () => {
     );
 };
 
-VarPage.getLayout = page => getPageTitleLayout(getMainLayout(getSectionLayout(page, 'Project VAR')), 'Var');
+VarPage.getLayout = page => getPageTitleLayout(getMainLayout(getSectionLayout(page, 'VAR')), 'Var');
 
 export default VarPage;

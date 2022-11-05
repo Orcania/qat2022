@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useCelesteSelector } from '@celeste-js/react';
 
-import { close_modal } from 'src/redux/actions/modalActions';
+import { close_modal, open_modal } from 'src/redux/actions/modalActions';
 
 import { Dialog } from 'primereact/dialog';
 // import { onConnectError } from 'src/static/notifications-functions';
@@ -17,6 +17,8 @@ import modals from 'src/static/app.modals';
 import { toast } from 'react-toastify';
 import { rpcs } from 'celeste.config';
 // import { toast } from 'react-toastify';
+
+const rootUrl = 'https://server.worldfantasycup.com/image?id=';
 
 const WhileMintModal = () => {
     // app state
@@ -47,7 +49,21 @@ const WhileMintModal = () => {
 
                 const res = await api.get.mintedNfts(walletReducer.address);
 
-                console.log(res);
+                const images = res.data.data.map(item => {
+                    return {
+                        id: item,
+                        url: rootUrl + item,
+                    };
+                });
+
+                dispatch(
+                    open_modal({
+                        modalName: modals.MINTEDNFTS,
+                        modalData: {
+                            images,
+                        },
+                    })
+                );
 
                 const toastContent = () => (
                     <div className="">

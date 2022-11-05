@@ -23,8 +23,8 @@ const ReadMore = ({ text }) => {
 
 const DescriptionSection = () => {
     return (
-        <section className="px-2" style={{ marginBottom: '5rem' }}>
-            <h1 className="cooltitle3 has-text-centered has-font-akira mb-6">Description</h1>
+        <section className="px-2" style={{ marginBottom: '8rem' }}>
+            <h1 className="cooltitle3 has-text-centered has-font-akira mb-6 p-5">Description</h1>
             <p className="has-text-white  is-size-5 has-text-centered">
                 <ReadMore
                     text={`

@@ -9,13 +9,19 @@ import { open_modal } from 'src/redux/actions';
 
 import modals from 'src/static/app.modals';
 
+const mintStarted = false;
+
 const BannerSection = () => {
     const dispath = useDispatch();
 
     const [timeLeft, live] = useCountdown(1668902400000);
 
     const onMintClick = () => {
-        dispath(open_modal({ modalName: modals.MINTMODAL }));
+        if (mintStarted) {
+            dispath(open_modal({ modalName: modals.MINTMODAL }));
+        } else {
+            dispath(open_modal({ modalName: modals.MINTNOTSTARTEDMODAL }));
+        }
     };
 
     return (
@@ -24,14 +30,17 @@ const BannerSection = () => {
                 <div className="cc pt-6" style={{ minHeight: '100%' }}>
                     <div className="mb-5">
                         <Logo />
-                    </div>
-                    <div className="divbanner">
-                        <h1 className="subtitle  has-text-white  has-font-qatar has-text-centered-mobile">
-                            Register and Mint your NFT <br />
+                        <br />
+                        <h1 className="subtitle  has-text-white  has-font-qatar has-text-centered-mobile is-size-6">
+                            Register and Mint your NFT. <br />
                             Activate your legendary fantasy football team and collect points. <br />
                             Play the unofficial Fantasy game of the World Cup & Make your winnings official.
                         </h1>
                     </div>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
                     <div className="divbanner" style={{ width: '100%', display: 'grid', placeItems: 'center' }}>
                         {live ? null : (
                             <div className="is-flex">

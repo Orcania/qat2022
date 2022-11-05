@@ -13,11 +13,12 @@ const TeamSection = () => {
                 return (
                     <div key={group.id} style={{ margin: '0 0 7rem 0' }}>
                         <h1 className="cooltitle2 has-text-centered has-font-akira mb-6">{group.name}</h1>
+                        <br />
                         <div style={{ display: 'grid', placeItems: 'center' }}>
                             <div className={flex_wrapper}>
                                 {group.teams.map(team => {
                                     return (
-                                        <div key={team.id} className={`mx-4 ${div}`}>
+                                        <div key={team.id} className={`${div}`}>
                                             <div className="is-flex is-justify-content-center">
                                                 <Image
                                                     src={team.img}
@@ -31,7 +32,7 @@ const TeamSection = () => {
                                                 {team.name}
                                             </h2>
                                             <h2 className="subtitle is-5 has-text-orange has-font-montserrat has-text-centered ">
-                                                Rarity {team.rarity}%
+                                                <b>Rarity {team.rarity}%</b>
                                             </h2>
                                         </div>
                                     );

@@ -50,6 +50,6 @@
     font-family: 'PT Mono', monospace;
 }
 
-*:not(.has-font-akira):not(i):not(.pi):not(.has-font-ptmono):not(.p-dialog-title) {
+*:not(.has-font-akira):not(i):not(.pi):not(.has-font-ptmono):not(.p-dialog-title):not(.ignore-font) {
     font-family: 'Montserrat', sans-serif;
 }

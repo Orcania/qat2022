@@ -51,10 +51,9 @@ const data = [
                 As of now, we are preparing the launch of the following Football Leagues:
                 <br />
                 <br />
-                Turkish Fantasy League (2023) <br />
-                Polish Fantasy League (2023) <br />
-                Spanish Fantasy League (2023) <br />
-                <br />
+                Turkish Fantasy League (2023). <br />
+                Polish Fantasy League (2023). <br />
+                Spanish Fantasy League (2023). <br />
                 <br />
                 A detailed roadmap and timeline containing the upcoming leagues and
                 <br />
