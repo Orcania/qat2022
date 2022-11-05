@@ -8,6 +8,7 @@ import { Provider } from 'react-redux';
 import WalletsModal from 'src/components/modals/wallets-modal';
 import WalletAccountModal from 'src/components/modals/wallet-account-modal';
 import MintModal from 'src/components/modals/mint';
+import WhileMintModal from 'src/components/modals/while-mint';
 
 import { ToastContainer } from 'react-toastify';
 
@@ -34,12 +35,13 @@ function MyApp({ Component, pageProps }) {
             <Script src={`https://kit.fontawesome.com/${FONT_AWESOME_KEY}.js`} />
 
             <CelesteProvider>
-                <ToastContainer />
+                <ToastContainer theme="dark" />
 
                 <Provider store={store}>
                     <WalletsModal />
                     <WalletAccountModal />
                     <MintModal />
+                    <WhileMintModal />
                     {getDecorators(getLayout(<Component {...pageProps} />))}
                 </Provider>
             </CelesteProvider>

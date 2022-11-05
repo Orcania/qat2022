@@ -54,7 +54,7 @@ const WalletAccountModal = () => {
         if (!web3Reducer.initialized || walletReducer.address === null) return;
 
         (async () => {
-            const web3 = web3Reducer.web3readonly['1'];
+            const web3 = web3Reducer.web3readonly[rpcs.ETH.chainId];
             const currencyBalance = await web3.eth.getBalance(walletReducer.address);
             setBalance(currencyBalance);
 

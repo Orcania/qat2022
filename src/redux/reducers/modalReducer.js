@@ -20,7 +20,7 @@ const reducer = (state = defaultState, action) => {
     switch (action.type) {
         case OPEN_MODAL:
             return {
-                ...state,
+                ...defaultState,
                 [action.payload.modalName]: { isOpen: true, data: action.payload.data },
                 currentModal: action.payload.modalName,
             };

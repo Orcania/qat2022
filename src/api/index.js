@@ -1,11 +1,17 @@
-// import axios from 'axios';
+import axios from 'axios';
 
 // const endpoint = process.env.ENDPOINT1;
 // const endpoint1 = process.env.ENDPOINT;
 
+const root = process.env.ENDPOINT;
+
 const api = {
     get: {
-        items: () => [{ id: 1 }, { id: 2 }, { id: 3 }],
+        mintedNfts: address =>
+            axios({
+                method: 'GET',
+                url: `${root}/newlyMintedNftsOf?address=${address}`,
+            }),
     },
     post: {},
     put: {},

@@ -16,7 +16,7 @@ const TeamSection = () => {
                             <br />
 
                             <div>
-                                <h2 className="cooltitle2 has-text-centered has-font-montserrat  mb-5">
+                                <h2 className="cooltitle3 has-text-centered has-font-montserrat  mb-5">
                                     <b>{team.name}</b>
                                 </h2>
 

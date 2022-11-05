@@ -47,7 +47,8 @@
         width: 300px;
         color: rgba($burgundy, 0.9);
         transform: translateY(-50%);
-        font-size: 1.75rem;
+        font-size: 1.25rem;
+        font-family: 'Akira', sans-serif;
     }
 
     &:hover {
@@ -101,4 +102,19 @@
     font-size: 0.75rem;
     padding: 1rem 1rem;
     color: $burgundy;
+}
+
+.mintheader {
+    .p-dialog-title {
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 180px;
+            height: 2px;
+            background: #343a40;
+        }
+    }
 }

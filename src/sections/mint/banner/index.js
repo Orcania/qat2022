@@ -1,8 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { useDispatch } from 'react-redux';
 
-import { ConnectedWrapper, NetworkWrapper } from '@celeste-js/react';
-
 import Logo from 'src/components/commons/logo';
 
 import useCountdown from 'src/hooks/useCountdown';
@@ -10,7 +8,6 @@ import useCountdown from 'src/hooks/useCountdown';
 import { open_modal } from 'src/redux/actions';
 
 import modals from 'src/static/app.modals';
-import { toast } from 'react-toastify';
 
 const BannerSection = () => {
     const dispath = useDispatch();
@@ -19,17 +16,6 @@ const BannerSection = () => {
 
     const onMintClick = () => {
         dispath(open_modal({ modalName: modals.MINTMODAL }));
-    };
-
-    const openWalletsModal = () => {
-        dispath(open_modal({ modalName: modals.WALLETSMODAL }));
-    };
-
-    const pleaseChangeToEth = () => {
-        toast.info('Please change to Ethereum network', {
-            closeOnClick: false,
-            pauseOnHover: true,
-        });
     };
 
     return (
@@ -65,25 +51,9 @@ const BannerSection = () => {
                         )}
                     </div>
                     <div className="divbanner" style={{ display: 'grid', placeItems: 'center' }}>
-                        <ConnectedWrapper
-                            disconnectedComponent={
-                                <button className="mint-button" type="button" onClick={openWalletsModal}>
-                                    Connect Wallet
-                                </button>
-                            }
-                        >
-                            <NetworkWrapper
-                                info={
-                                    <button className="mint-button" type="button" onClick={pleaseChangeToEth}>
-                                        eth
-                                    </button>
-                                }
-                            >
-                                <button className="mint-button" type="button" onClick={onMintClick}>
-                                    Mint
-                                </button>
-                            </NetworkWrapper>
-                        </ConnectedWrapper>
+                        <button className="mint-button" type="button" onClick={onMintClick}>
+                            Mint
+                        </button>
                     </div>
 
                     <div className="divbanner" style={{ display: 'grid', placeItems: 'center' }}>

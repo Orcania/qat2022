@@ -4,6 +4,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
@@ -25,6 +26,8 @@ const Navbar = () => {
     const { walletReducer } = useCelesteSelector(state => state);
     // const { globalReducer } = useSelector(state => state);
     const dispatch = useDispatch();
+
+    const { pathname } = useRouter();
 
     const handleHamburgerClick = () => {
         const newValue = !mobileActive;
@@ -100,7 +103,7 @@ const Navbar = () => {
                     <div className="navbar-start">
                         <Link href="/home">
                             <a
-                                className="navbar-item has-font-montserrat"
+                                className={`navbar-item has-font-montserrat ${pathname === '/home' ? 'is-active' : ''}`}
                                 onClick={handleNavbarItemClick}
                                 role="button"
                             >
@@ -110,7 +113,9 @@ const Navbar = () => {
 
                         <Link href="/howitworks">
                             <a
-                                className="navbar-item has-font-montserrat"
+                                className={`navbar-item has-font-montserrat ${
+                                    pathname === '/howitworks' ? 'is-active' : ''
+                                }`}
                                 onClick={handleNavbarItemClick}
                                 role="button"
                             >
@@ -120,7 +125,9 @@ const Navbar = () => {
 
                         <Link href="/aboutus">
                             <a
-                                className="navbar-item has-font-montserrat"
+                                className={`navbar-item has-font-montserrat ${
+                                    pathname === '/aboutus' ? 'is-active' : ''
+                                }`}
                                 onClick={handleNavbarItemClick}
                                 role="button"
                             >
@@ -130,7 +137,9 @@ const Navbar = () => {
 
                         <Link href="/roadmap">
                             <a
-                                className="navbar-item has-font-montserrat"
+                                className={`navbar-item has-font-montserrat ${
+                                    pathname === '/roadmap' ? 'is-active' : ''
+                                }`}
                                 onClick={handleNavbarItemClick}
                                 role="button"
                             >
@@ -140,7 +149,7 @@ const Navbar = () => {
 
                         <Link href="/var">
                             <a
-                                className="navbar-item has-font-montserrat"
+                                className={`navbar-item has-font-montserrat ${pathname === '/var' ? 'is-active' : ''}`}
                                 onClick={handleNavbarItemClick}
                                 role="button"
                             >
@@ -150,7 +159,9 @@ const Navbar = () => {
 
                         <Link href="/rarity">
                             <a
-                                className="navbar-item has-font-montserrat"
+                                className={`navbar-item has-font-montserrat ${
+                                    pathname === '/rarity' ? 'is-active' : ''
+                                }`}
                                 onClick={handleNavbarItemClick}
                                 role="button"
                             >

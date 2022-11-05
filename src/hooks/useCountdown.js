@@ -11,6 +11,7 @@ const fetchTime = async () => {
 };
 
 let now = 0;
+let called = false;
 
 const useCountdown = unixMilliseconds => {
     const [timeLeft, setTimeLeft] = useState({
@@ -20,14 +21,12 @@ const useCountdown = unixMilliseconds => {
         S: '-',
     });
     const [done, setDone] = useState(false);
-    const [called, setCalled] = useState(false);
 
     useEffect(() => {
         const interval = setInterval(async () => {
             now = !called ? await fetchTime() : now + 1000;
 
-            if (!called) setCalled(true);
-
+            called = true;
             const distance = unixMilliseconds - now;
 
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));

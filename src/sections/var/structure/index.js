@@ -54,7 +54,7 @@ const data = [
 const StructureSection = () => {
     return (
         <section className="px-2" style={{ marginBottom: '5rem' }}>
-            <h1 className="cooltitle2 has-text-centered has-font-qatar mb-6">Structure</h1>
+            <h1 className="cooltitle3 has-text-centered has-font-akira mb-6">Structure</h1>
             <div className="is-flex is-justify-content-center">
                 <table className="cooltable2 table is-fullwidth is-hoverable has-bg-burgundy" style={{ width: '40vw' }}>
                     <thead>

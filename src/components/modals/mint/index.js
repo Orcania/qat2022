@@ -22,6 +22,10 @@ import { formatNumber, BigNum2NormalNum } from 'src/utils';
 
 import { rpcs } from 'celeste.config';
 
+import styles from './mint.module.scss';
+
+const { inputs } = styles;
+
 const max = 100000;
 
 const MintModal = () => {
@@ -71,42 +75,26 @@ const MintModal = () => {
 
     const handleBuy = async e => {
         e.preventDefault();
-        setIsLoading(true);
 
-        try {
-            const value = BigNumber(amount).multipliedBy(nftModel.price).toFixed(0).toString();
-            const txRes = await nftController.buy({
-                from: walletReducer.address,
-                value,
-            });
+        const value = BigNumber(amount).multipliedBy(nftModel.price).toFixed(0).toString();
 
-            // dispatch(open_modal({ modalName: modals.WHILEMINTINGMODAL }));
+        // wait until tx has been sent or cancelled then open modal
 
-            const toastContent = () => (
-                <div className="">
-                    <div className="">
-                        <h1 className="subtitle is-6 has-text-success mb-0">
-                            <span>Successfull Transaction!</span>
-                        </h1>{' '}
-                        <a href={`${rpcs.ETH.explorer}/tx/${txRes.transactionHash}`} target="_blank" rel="noreferrer">
-                            View on Etherscan
-                        </a>
-                    </div>
-                </div>
-            );
+        // const txRes = nftController.buy({
+        //     from: walletReducer.address,
+        //     value,
+        // });
 
-            toast.success(toastContent, {
-                closeOnClick: false,
-                pauseOnHover: true,
-            });
-        } catch (err) {
-            toast.error(err.message);
-            console.log(err);
-        }
+        dispatch(
+            open_modal({
+                modalName: modals.WHILEMINTINGMODAL,
+                modalData: {
+                    value,
+                },
+            })
+        );
 
-        setIsLoading(false);
         setAmount(1);
-        setTotal(0);
     };
 
     // get nft data
@@ -132,24 +120,24 @@ const MintModal = () => {
     return (
         <Dialog
             visible={mintModal.isOpen}
-            header="Assemble your Teams"
+            header="GET YOUR TEAM"
             onHide={closeModal}
             draggable={false}
             className="resize-manager"
-            headerClassName="has-font-akira"
+            headerClassName="mintheader has-font-akira"
         >
             <form onSubmit={handleBuy}>
-                <div className="box has-bg-darkpurple-o-50 has-border-radius-12">
+                <div className={` ${inputs} mb-5 mt-5`}>
                     <div className="field is-flex is-justify-content-space-between is-align-items-center mb-0">
                         <div className="control">
                             <button
-                                className="button has-border-radius-12"
+                                className="button has-border-radius-12 is-medium"
                                 type="button"
                                 id="btn-left"
                                 onClick={handleDecreaseClick}
                             >
-                                <span className="icon is-small">
-                                    <i className="fas fa-angle-left" />
+                                <span className="icon is-size-6">
+                                    <i className="fa-solid fa-minus" />
                                 </span>
                             </button>
                         </div>
@@ -165,23 +153,34 @@ const MintModal = () => {
                         </div>
                         <div className="control">
                             <button
-                                className="button has-border-radius-12"
+                                className="button has-border-radius-12 is-medium"
                                 type="button"
                                 id="btn-right"
                                 onClick={handleIncreaseClick}
                             >
-                                <span className="icon is-small">
-                                    <i className="fas fa-angle-right" />
+                                <span className="icon is-size-6">
+                                    <i className="fa-solid fa-plus" />
                                 </span>
                             </button>
                         </div>
                     </div>
                 </div>
 
-                <div className="box has-bg-darkpurple-o-50 is-flex is-justify-content-space-between is-align-items-ceanter total-box">
-                    <h3 className="has-text-ww-o-75">Total</h3>
+                <div className="is-flex is-justify-content-center my-5">
+                    <img src="media/teams.png" alt="" width="40%" />
+                </div>
+
+                <div className="box has-bg-grey is-flex is-justify-content-space-between is-align-items-ceanter total-box">
+                    <div>
+                        <h3 className="has-text-ww-o-75 is-size-4 has-font-montserrat">
+                            <b>Total</b>
+                        </h3>
+                        <h3 className="has-text-burgundy-o-6 is-size-6 has-font-montserrat">Ethereum</h3>
+                    </div>
                     <h1 className="subtitle  mb-0 " sytle={{ height: '10px !important' }}>
-                        <span className="has-font-ptmono">{+BigNum2NormalNum(total, 18, 10)}</span> ETH
+                        <span className="has-font-ptmono is-size-4">
+                            <b>{+BigNum2NormalNum(total, 18, 18)}</b>
+                        </span>
                     </h1>
                 </div>
                 <div>
@@ -189,14 +188,19 @@ const MintModal = () => {
                         disconnectedComponent={
                             <div className=" buy-btn">
                                 <button
-                                    className="button has-text-white is-medium"
+                                    className="button is-fullwidth is-burgundy is-large "
                                     type="button"
                                     onClick={openWalletModal}
                                 >
-                                    <span className="mr-2">
-                                        <i className="fas fa-wallet mr-2" style={{ transform: 'rotate(-135deg)' }} />
-                                    </span>
-                                    Connect Wallet
+                                    <b>
+                                        <span className="mr-2">
+                                            <i
+                                                className="fas fa-wallet mr-2"
+                                                style={{ transform: 'rotate(-135deg)' }}
+                                            />
+                                        </span>
+                                        Connect Wallet
+                                    </b>
                                 </button>
                             </div>
                         }
@@ -204,11 +208,16 @@ const MintModal = () => {
                         <NetworkWrapper
                             info={
                                 <SwitchNetworkButton
-                                    className="button has-text-white is-medium"
+                                    className="button is-fullwidth is-burgundy is-large "
                                     chainId={+rpcs.ETH.chainId}
                                     onErrorCB={toast.error}
                                 >
-                                    Change to Eth
+                                    <b>
+                                        <span className="mr-2">
+                                            <i className="fa-brands fa-ethereum" />
+                                        </span>
+                                        Change to Eth
+                                    </b>
                                 </SwitchNetworkButton>
                             }
                         >
@@ -217,9 +226,11 @@ const MintModal = () => {
                                     label="Buy"
                                     type="submit"
                                     disabled={+amount === 0}
-                                    className={`button is-fullwidth ${isloading ? 'is-loading' : ''}`}
+                                    className={`button is-fullwidth is-burgundy is-large ${
+                                        isloading ? 'is-loading' : ''
+                                    }`}
                                 >
-                                    Mint
+                                    <b>Let&apos;s Go!</b>
                                 </button>
                             </div>
                         </NetworkWrapper>

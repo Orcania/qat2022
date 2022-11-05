@@ -4,20 +4,23 @@ module.exports = {
     isMultichain: false,
     rpcs: {
         ETH: {
-            chainId: '1',
-            url: 'https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161',
-            explorer: 'https://etherscan.io',
+            // chainId: '1',
+            // url: 'https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161',
+            // explorer: 'https://etherscan.io',
+            chainId: '97',
+            url: 'https://data-seed-prebsc-1-s1.binance.org:8545/',
+            explorer: 'https://testnet.bscscan.com',
         },
     },
     smartContracts: [
         {
             key: 'MINT',
             abi: mintAbi,
-            address: '0x5B82d07C41b0d8c812BF1CD6A7232dFEF67203d2',
+            address: '0xD50b51898Fc8c8037C3c9CC299070Db376b7b3F3',
         },
     ],
     addressBook: {
         ZERO: '0x0000000000000000000000000000000000000000',
-        MINT: '0x5B82d07C41b0d8c812BF1CD6A7232dFEF67203d2',
+        MINT: '0xD50b51898Fc8c8037C3c9CC299070Db376b7b3F3',
     },
 };

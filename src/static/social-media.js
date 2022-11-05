@@ -14,7 +14,7 @@ const data = [
     {
         id: 3,
         name: 'OpenSea',
-        url: 'https://opensea.io',
+        url: 'https://opensea.io/collection/worldfantasycup',
         icon: () => <i className="fa-solid fa-sailboat" />,
     },
 ];

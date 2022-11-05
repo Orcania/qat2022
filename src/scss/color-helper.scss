@@ -91,8 +91,8 @@ $corners: 'top', 'right', 'bottom', 'left';
             background-color: rgba($color, $i/10) !important;
         }
 
-        .has-text-#{$colorName}-o-#{$levels} {
-            color: rgba($color, $levels/100) !important;
+        .has-text-#{$colorName}-o-#{$i} {
+            color: rgba($color, $i / 10) !important;
         }
     }
 
