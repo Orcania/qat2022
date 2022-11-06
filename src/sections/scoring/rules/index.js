@@ -15,7 +15,7 @@ const RulesSection = () => {
                         between them with the following rules:
                         <br />
                         <br />
-                        <ol>
+                        <ol style={{ listStylePosition: 'inside' }}>
                             <li className="pb-3">
                                 The goal average: Total number of scored vs received goals of the NFT Teams.
                             </li>

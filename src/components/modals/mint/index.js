@@ -32,12 +32,12 @@ const MintModal = () => {
     // app state
     const dispatch = useDispatch();
     const mintModal = useSelector(state => state.modalReducer[modals.MINTMODAL]);
-    const { web3Reducer, walletReducer } = useCelesteSelector(state => state);
+    const { web3Reducer } = useCelesteSelector(state => state);
 
     // local state
     const [amount, setAmount] = useState(1);
     const [total, setTotal] = useState(0);
-    const [isloading, setIsLoading] = useState(false);
+    const [isloading] = useState(false);
 
     // controllers
     const [nftController] = useState(new MintController());

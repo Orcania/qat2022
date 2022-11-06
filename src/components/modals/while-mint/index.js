@@ -49,6 +49,8 @@ const WhileMintModal = () => {
 
                 const res = await api.get.mintedNfts(walletReducer.address);
 
+                console.log(res);
+
                 const images = res.data.data.map(item => {
                     return {
                         id: item,
@@ -58,7 +60,7 @@ const WhileMintModal = () => {
 
                 dispatch(
                     open_modal({
-                        modalName: modals.MINTEDNFTS,
+                        modalName: modals.AFTER_MINT_MODAL,
                         modalData: {
                             images,
                         },
@@ -112,6 +114,7 @@ const WhileMintModal = () => {
             // close modal
             // dispatch(close_modal());
         }, 5000);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [dispatch, modal.isOpen, web3Reducer.initialized, walletReducer.address]);
 
     return (

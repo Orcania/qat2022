@@ -6,7 +6,6 @@ class WalletModel {
     constructor(address = null) {
         this.address = address;
         this.balance = '0';
-        this.ocaBalance = '0';
     }
 }
 
