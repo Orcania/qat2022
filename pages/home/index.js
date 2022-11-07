@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { getLayout as getPageTitleLayout } from 'src/layouts/page-title';
@@ -14,18 +14,27 @@ const MintPage = () => {
     const { homeReducer } = useSelector(state => state);
 
     const [done, setDone] = useState(false);
+    const videoContainerRef = useRef(null);
 
     useEffect(() => {
         // if esc is pressed, change isVideoActive to false
         // is user touches the screen, change isVideoActive to false
         // if user scrolls, change isVideoActive to false
 
-        if (done) return undefined;
+        if (!videoContainerRef.current || done) return undefined;
 
         const c = () => {
-            dispatch(set_video(false));
+            const containerDiv = videoContainerRef.current;
+
+            containerDiv.classList.add('vanish');
+
             dispatch(set_music(true));
-            setDone(true);
+
+            // wait until the animation is done
+            containerDiv.addEventListener('animationend', () => {
+                dispatch(set_video(false));
+                setDone(true);
+            });
         };
 
         document.addEventListener('keydown', c);
@@ -44,7 +53,11 @@ const MintPage = () => {
     return (
         <div className="has-bg-burgundy " style={{ minHeight: '100vh' }}>
             {homeReducer.isVideoActive ? (
-                <div className="videoo-container" style={{ height: '100%', overflow: 'hidden' }}>
+                <div
+                    className="videoo-container"
+                    style={{ height: '100%', overflow: 'hidden' }}
+                    ref={videoContainerRef}
+                >
                     <video autoPlay loop muted>
                         <source src="/media/video/promo.mp4" type="video/mp4" />
                     </video>

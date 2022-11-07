@@ -77,11 +77,25 @@
 }
 
 .videoo-container {
+    &.vanish {
+        animation: vanish 2s ease-in-out;
+    }
+
     video {
         // position: absolute;
         right: 0;
         bottom: 0;
         min-width: 100%;
         min-height: 100%;
+    }
+}
+
+@keyframes vanish {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
     }
 }
