@@ -18,8 +18,6 @@ const AfterMintModal = () => {
 
     const { data } = modal;
 
-    console.log('data', data);
-
     const closeModal = () => dispatch(close_modal());
 
     const productTemplate = nft => {

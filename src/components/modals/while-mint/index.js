@@ -44,12 +44,10 @@ const WhileMintModal = () => {
                 });
 
                 await new Promise(resolve => {
-                    setTimeout(resolve, 5000);
+                    setTimeout(resolve, 8000);
                 });
 
                 const res = await api.get.mintedNfts(walletReducer.address);
-
-                console.log(res);
 
                 const images = res.data.data.map(item => {
                     return {

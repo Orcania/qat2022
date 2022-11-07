@@ -17,11 +17,13 @@ const Footer = () => {
                                 target="_blank"
                                 rel="noreferrer"
                                 className="is-size-4 mx-3"
+                                style={{ display: 'grid', placeItems: 'center' }}
                             >
-                                <span className="icon has-text-burgundy ">{item.icon()}</span>
+                                <span className="icon has-text-burgundy ">{item.icon('b')}</span>
                             </a>
                         ))}
                     </div>
+                    <br />
                     <h1 className="subtitle is-6 has-text-centered has-text-burgundy has-font-qatar">
                         © 2022 World Fantasy Cup – All Rights Reserved
                     </h1>

@@ -9,3 +9,4 @@ export const CLOSE_MODAL = 'CLOSE_MODAL';
 export const SET_WALLET = 'SET_WALLET';
 
 export const SET_VIDEO = 'SET_VIDEO';
+export const SET_MUSIC = 'SET_MUSIC';

@@ -1,10 +1,11 @@
 /* eslint-disable no-console */
 /* eslint-disable @next/next/no-img-element */
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { toast } from 'react-toastify';
 import { useCelesteSelector, ConnectedWrapper, NetworkWrapper, SwitchNetworkButton } from '@celeste-js/react';
 import BigNumber from 'bignumber.js';
+import { CrossmintPayButton } from '@crossmint/client-sdk-react-ui';
 
 import { close_modal, open_modal } from 'src/redux/actions/modalActions';
 
@@ -24,7 +25,7 @@ import { rpcs } from 'celeste.config';
 
 import styles from './mint.module.scss';
 
-const { inputs } = styles;
+const { inputs, crossmint_btn } = styles;
 
 const max = 100000;
 
@@ -38,6 +39,7 @@ const MintModal = () => {
     const [amount, setAmount] = useState(1);
     const [total, setTotal] = useState(0);
     const [isloading] = useState(false);
+    const buttonsRef = useRef(null);
 
     // controllers
     const [nftController] = useState(new MintController());
@@ -117,6 +119,16 @@ const MintModal = () => {
         setTotal(tottal);
     }, [amount, nftModel]);
 
+    // useEffect(() => {
+    //     if (!buttonsRef.current || !mintModal.isOpen) return;
+
+    //     const buttonsDiv = buttonsRef.current;
+
+    //     const crossmintBtnSpan = buttonsDiv.querySelector('#crossmint-btn span');
+
+    //     crossmintBtnSpan.textContent = 'Buy with card';
+    // }, [buttonsRef, mintModal.isOpen]);
+
     return (
         <Dialog
             visible={mintModal.isOpen}
@@ -167,7 +179,7 @@ const MintModal = () => {
                 </div>
 
                 <div className="is-flex is-justify-content-center my-5">
-                    <img src="media/teams.png" alt="" width="40%" />
+                    <img src="media/teams.png" alt="" width="35%" />
                 </div>
 
                 <div className="box has-bg-grey is-flex is-justify-content-space-between is-align-items-ceanter total-box">
@@ -221,17 +233,30 @@ const MintModal = () => {
                                 </SwitchNetworkButton>
                             }
                         >
-                            <div className=" buy-btn">
+                            <div className="buttons " ref={buttonsRef}>
                                 <button
                                     label="Buy"
                                     type="submit"
                                     disabled={+amount === 0}
-                                    className={`button is-fullwidth is-burgundy is-large ${
+                                    className={`button is-fullwidth is-burgundy is-normal has-border-radius-10 ${
                                         isloading ? 'is-loading' : ''
                                     }`}
                                 >
-                                    <b>Let&apos;s Go!</b>
+                                    <span className="icon">
+                                        <i className="fa-brands fa-ethereum" />
+                                    </span>
+                                    <b>Buy with ETH</b>
                                 </button>
+                                <CrossmintPayButton
+                                    id="crossmint-btn"
+                                    className={`button is-fullwidth is-burgundy is-normal has-border-radius-10 ${crossmint_btn}`}
+                                    clientId="3d71cf98-b158-4371-a56f-97db0eeb9316"
+                                    disabled={+amount === 0}
+                                    mintConfig={{ type: 'erc-721', totalPrice: (+amount * 0.05).toString() }}
+                                    type="button"
+                                >
+                                    Buy with card
+                                </CrossmintPayButton>
                             </div>
                         </NetworkWrapper>
                     </ConnectedWrapper>

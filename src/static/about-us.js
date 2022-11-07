@@ -51,11 +51,11 @@ const teamData = [
                 <br />
                 Tim began personally investing in cryptocurrency around 7 years ago, and has successfully built Capital
                 Block over the past 2 years into the most trusted consultancy in Europe for sports teams looking to
-                enter the web3 space. Capital Block represents Tim’s two major passions: sports and crypto. <br />
+                enter the web3 space. Capital Block represents Tim’s two major passions: sports and crypto.
                 <br />
                 <br />
                 Tim and his team at Capital Block help sports clubs, brands, production houses, artists, celebrities and
-                entertainers navigate the web3 space, taking in NFTs, the Metaverse, crypto, and more
+                entertainers navigate the web3 space, taking in NFTs, the Metaverse, crypto, and more.
             </div>
         ),
     },

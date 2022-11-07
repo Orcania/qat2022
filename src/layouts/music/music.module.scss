@@ -1,0 +1,16 @@
+@import 'src/scss/vars.scss';
+
+.container {
+    position: fixed;
+    top: 15%;
+    left: 0;
+
+    background-color: $darkgrey;
+    padding: 1rem 20px;
+
+    border-radius: 0 20px 20px 0;
+
+    min-height: 50px;
+
+    z-index: 10;
+}

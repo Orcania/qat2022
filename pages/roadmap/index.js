@@ -10,15 +10,15 @@ const FaqPage = () => {
             <div className="container">
                 <br />
                 <br />
-                {faqData.map(item => (
-                    <section className="px-2" style={{ marginBottom: '8rem' }} key={item.id}>
-                        <h1 className="cooltitle3 has-text-centered has-font-akira mb-6 p-5">
-                            {item.question}
-                            <br />
-                        </h1>
-                        {item.ansComponent()}
-                    </section>
-                ))}
+                {faqData.map(item => {
+                    const q = typeof item.question === 'string' ? item.question : item.question();
+                    return (
+                        <section className="px-2" style={{ marginBottom: '8rem' }} key={item.id}>
+                            {q}
+                            {item.ansComponent()}
+                        </section>
+                    );
+                })}
             </div>
         </div>
     );

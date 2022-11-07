@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { getLayout as getPageTitleLayout } from 'src/layouts/page-title';
@@ -7,47 +7,39 @@ import { getLayout as getMainLayout } from 'src/layouts/main';
 import { getDecorator as getWalletDecorator } from 'src/decorators/walletdecorator';
 
 import BannerSection from 'src/sections/mint/banner';
-import { set_video } from 'src/redux/actions';
+import { set_video, set_music } from 'src/redux/actions';
 
 const MintPage = () => {
     const dispatch = useDispatch();
     const { homeReducer } = useSelector(state => state);
+
+    const [done, setDone] = useState(false);
 
     useEffect(() => {
         // if esc is pressed, change isVideoActive to false
         // is user touches the screen, change isVideoActive to false
         // if user scrolls, change isVideoActive to false
 
-        const handleKeyDown = event => {
-            if (event.key === 'Escape') {
-                dispatch(set_video(false));
-            }
-        };
+        if (done) return undefined;
 
-        const handleTouchStart = () => {
+        const c = () => {
             dispatch(set_video(false));
+            dispatch(set_music(true));
+            setDone(true);
         };
 
-        const handleScroll = () => {
-            dispatch(set_video(false));
-        };
-
-        const handleClick = () => {
-            dispatch(set_video(false));
-        };
-
-        document.addEventListener('keydown', handleKeyDown);
-        document.addEventListener('touchstart', handleTouchStart);
-        document.addEventListener('scroll', handleScroll);
-        document.addEventListener('click', handleClick);
+        document.addEventListener('keydown', c);
+        document.addEventListener('touchstart', c);
+        document.addEventListener('scroll', c);
+        document.addEventListener('click', c);
 
         return () => {
-            document.removeEventListener('keydown', handleKeyDown);
-            document.removeEventListener('touchstart', handleTouchStart);
-            document.removeEventListener('scroll', handleScroll);
-            document.removeEventListener('click', handleClick);
+            document.removeEventListener('keydown', c);
+            document.removeEventListener('touchstart', c);
+            document.removeEventListener('scroll', c);
+            document.removeEventListener('click', c);
         };
-    }, [dispatch]);
+    }, [dispatch, done]);
 
     return (
         <div className="has-bg-burgundy " style={{ minHeight: '100vh' }}>

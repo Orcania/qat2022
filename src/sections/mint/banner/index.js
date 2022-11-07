@@ -9,7 +9,7 @@ import { open_modal } from 'src/redux/actions';
 
 import modals from 'src/static/app.modals';
 
-const mintStarted = false;
+const mintStarted = true;
 
 const BannerSection = () => {
     const dispath = useDispatch();

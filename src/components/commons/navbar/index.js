@@ -7,16 +7,21 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 import { useState, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useCelesteSelector, ConnectedWrapper } from '@celeste-js/react';
 
-import { open_modal } from 'src/redux/actions';
+import { open_modal, set_music } from 'src/redux/actions';
 import socialMedia from 'src/static/social-media';
 import modals from 'src/static/app.modals';
 
 const getAddressReduced = address => `${address.slice(0, 6)}...${address.slice(-4)}`;
 
 const Navbar = () => {
+    // global state
+    const { pathname } = useRouter();
+    const dispatch = useDispatch();
+    const { homeReducer } = useSelector(state => state);
+
     // local state
     const [mobileActive, setMobileActive] = useState(false);
     const [burgerActive, setBurgerActive] = useState(false);
@@ -25,9 +30,6 @@ const Navbar = () => {
 
     const { walletReducer } = useCelesteSelector(state => state);
     // const { globalReducer } = useSelector(state => state);
-    const dispatch = useDispatch();
-
-    const { pathname } = useRouter();
 
     const handleHamburgerClick = () => {
         const newValue = !mobileActive;
@@ -53,6 +55,10 @@ const Navbar = () => {
 
     const handleNavbarItemClick = () => {
         handleHamburgerClick();
+    };
+
+    const handleSound = () => {
+        dispatch(set_music(!homeReducer.isMusicActive));
     };
 
     useEffect(() => {
@@ -177,6 +183,18 @@ const Navbar = () => {
                                     <span className="icon is-size-4">{item.icon()}</span>
                                 </a>
                             ))}
+                            <button
+                                type="button"
+                                className="unstyled-button is-hidden-touch mx-4"
+                                onClick={handleSound}
+                            >
+                                <span className="icon is-size-4">
+                                    <img
+                                        src={`/media/icons/${homeReducer.isMusicActive ? 'sound' : 'mute'}.png`}
+                                        alt=""
+                                    />
+                                </span>
+                            </button>
                         </div>
                         <ConnectedWrapper
                             disconnectedComponent={

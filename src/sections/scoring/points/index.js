@@ -14,7 +14,7 @@ const PointsSection = () => {
                         <li className="pb-0 has-text-centered">Approve the transaction </li>
                         <li className="pb-0 has-text-centered">Receive your NFT team in your wallet</li>
                         <li className="pb-0 has-text-centered">
-                            Sit back, watch the WC, and monitor your team’s ranking
+                            Sit back, watch the World Cup, and monitor your team’s ranking
                         </li>
                         <li className="pb-0 has-text-centered">Hopefully, collect your prizes!</li>
                         <li className="pb-0 has-text-centered">

@@ -1,7 +1,7 @@
 const data = [
     {
         id: 1,
-        question: 'Who we are',
+        question: () => <h1 className="cooltitle3 has-text-centered has-font-akira mb-6 p-5">Who we are</h1>,
         ansComponent: () => (
             <p className="has-text-white has-font-qatar is-size-5 has-text-centered">
                 World Fantasy Cup is a Sporting Labs project.
@@ -15,7 +15,12 @@ const data = [
     },
     {
         id: 2,
-        question: 'After the WC',
+        question: () => (
+            <h1 className="cooltitle3 has-text-centered has-font-akira mb-6 ">
+                After the <br />
+                world cup
+            </h1>
+        ),
         ansComponent: () => (
             <p className="has-text-white has-font-qatar is-size-5 has-text-centered">
                 Once the World Cup is finished, prizes will be distributed, and the top 50% of the NFT
@@ -28,7 +33,7 @@ const data = [
     },
     {
         id: 3,
-        question: 'Roadmap',
+        question: () => <h1 className="cooltitle3 has-text-centered has-font-akira mb-6 p-5">Roadmap</h1>,
         ansComponent: () => (
             <p className="has-text-white has-font-qatar is-size-5 has-text-centered">
                 World Fantasy Cup is a launch pad project designed by Sporting Labs to execute

@@ -5,6 +5,8 @@ import Script from 'next/script';
 
 import { Provider } from 'react-redux';
 
+import MusicLayout from 'src/layouts/music';
+
 import WalletsModal from 'src/components/modals/wallets-modal';
 import WalletAccountModal from 'src/components/modals/wallet-account-modal';
 import MintModal from 'src/components/modals/mint';
@@ -35,6 +37,7 @@ function MyApp({ Component, pageProps }) {
                 <meta name="description" content={appConfig.description} />
             </Head>
             <Script src={`https://kit.fontawesome.com/${FONT_AWESOME_KEY}.js`} />
+            <Script src="https://unpkg.com/@crossmint/client-sdk-vanilla-ui@0.1.0/lib/index.global.js" />
 
             <CelesteProvider>
                 <ToastContainer theme="dark" />
@@ -46,7 +49,7 @@ function MyApp({ Component, pageProps }) {
                     <WhileMintModal />
                     <AfterMintModal />
                     <MintNotStartedYetModal />
-                    {getDecorators(getLayout(<Component {...pageProps} />))}
+                    <MusicLayout>{getDecorators(getLayout(<Component {...pageProps} />))}</MusicLayout>
                 </Provider>
             </CelesteProvider>
         </>
