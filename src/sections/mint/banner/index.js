@@ -9,15 +9,13 @@ import { open_modal } from 'src/redux/actions';
 
 import modals from 'src/static/app.modals';
 
-const mintStarted = true;
-
 const BannerSection = () => {
     const dispath = useDispatch();
 
     const [timeLeft, live] = useCountdown(1668960000000);
 
     const onMintClick = () => {
-        if (live || mintStarted) {
+        if (live) {
             dispath(open_modal({ modalName: modals.MINTMODAL }));
         } else {
             dispath(open_modal({ modalName: modals.MINTNOTSTARTEDMODAL }));
