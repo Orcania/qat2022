@@ -255,7 +255,7 @@ const InfluencerMintModal = () => {
                         <CrossmintPayButton
                             id="crossmint-btn"
                             className={`button is-fullwidth is-burgundy is-normal has-border-radius-10 ${crossmint_btn}`}
-                            clientId="3d71cf98-b158-4371-a56f-97db0eeb9316"
+                            clientId="d5b45ef6-0988-4a90-8ee6-74f5e2a84526"
                             disabled={+amount === 0}
                             mintConfig={{
                                 type: 'erc-721',
