@@ -4,8 +4,9 @@ import { getLayout as getSectionLayout } from 'src/layouts/section';
 
 import ScoreBanner from 'src/sections/scoring/banner';
 import PointsSection from 'src/sections/scoring/points';
-import ExampleSection from 'src/sections/scoring/example';
 import RulesSection from 'src/sections/scoring/rules';
+import HowToBuy from 'src/sections/scoring/how-to-buy';
+import Video from 'src/sections/scoring/video';
 
 const ScoringPage = () => {
     return (
@@ -15,11 +16,19 @@ const ScoringPage = () => {
             <br />
             <br />
             <ScoreBanner />
+            {/* <ExampleSection /> */}
+            <br />
+            <br />
+            <Video />
+            <br />
+            <br />
             <PointsSection />
-            <ExampleSection />
             <br />
             <br />
             <RulesSection />
+            <br />
+            <br />
+            <HowToBuy />
         </div>
     );
 };

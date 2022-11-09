@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 /* eslint-disable @next/next/no-img-element */
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useCelesteSelector } from '@celeste-js/react';
 
@@ -10,8 +10,6 @@ import { Dialog } from 'primereact/dialog';
 // import { onConnectError } from 'src/static/notifications-functions';
 
 import api from 'src/api';
-
-import MintController from 'src/controllers/mint.controller';
 
 import modals from 'src/static/app.modals';
 import { toast } from 'react-toastify';
@@ -28,20 +26,15 @@ const WhileMintModal = () => {
 
     const closeModal = () => dispatch(close_modal());
 
-    const [nftController] = useState(new MintController());
-
     useEffect(() => {
         if (!modal.isOpen || !web3Reducer.initialized || walletReducer.address === null) return;
         // sleep 5 seconds
 
         (async () => {
-            const { value } = modal.data;
+            const { txMethod } = modal.data;
 
             try {
-                const txRes = await nftController.buy({
-                    value,
-                    from: walletReducer.address,
-                });
+                const txRes = await txMethod();
 
                 await new Promise(resolve => {
                     setTimeout(resolve, 8000);

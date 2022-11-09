@@ -84,7 +84,7 @@ const Navbar = () => {
         >
             <div className="container">
                 <div className="navbar-brand  py-2">
-                    <Link href="/">
+                    <Link href="/home">
                         <a className="navbar-item is-hidden-desktop" onClick={handleNavbarItemClick} role="button">
                             {/* <img src="./media/logo.png" width="120" alt="" /> */}
                             <h1 className="title is-4 has-text-white has-font-akira">W F C</h1>

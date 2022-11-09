@@ -1,12 +1,22 @@
+/* eslint-disable lines-between-class-members */
 import NftMintProxy from 'src/sc-proxies/mint';
+import InfluencerMint from 'src/sc-proxies/influencer-mint';
 
 import NftModel from 'src/models/nft.model';
 
 class MintController {
     #scProxy;
+    #influencerScProxy;
 
     constructor() {
         this.#scProxy = new NftMintProxy();
+        this.#influencerScProxy = new InfluencerMint();
+    }
+
+    influencerBuy({ referralId }, { from, value }) {
+        const write = this.#influencerScProxy.write();
+
+        return write.publicMint({ referralId }, { from, value });
     }
 
     buy({ from, value }) {

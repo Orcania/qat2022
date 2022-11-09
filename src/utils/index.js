@@ -22,3 +22,11 @@ export const formatNumber = value => {
 };
 
 export const reduceHash = (hash, amount = 4) => `${hash.slice(0, amount + 2)}...${hash.slice(-amount)}`;
+
+export const StringToHex = str => {
+    return Buffer.from(str).toString('hex');
+};
+
+export const HexToBn = hex => {
+    return new BigNumber(hex, 16).toString();
+};

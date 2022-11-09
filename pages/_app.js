@@ -13,6 +13,7 @@ import MintModal from 'src/components/modals/mint';
 import WhileMintModal from 'src/components/modals/while-mint';
 import AfterMintModal from 'src/components/modals/after-mint';
 import MintNotStartedYetModal from 'src/components/modals/mint-not-started-yet';
+import InfluencerMintModal from 'src/components/modals/influencer-mint';
 
 import { ToastContainer } from 'react-toastify';
 
@@ -46,6 +47,7 @@ function MyApp({ Component, pageProps }) {
                     <WalletsModal />
                     <WalletAccountModal />
                     <MintModal />
+                    <InfluencerMintModal />
                     <WhileMintModal />
                     <AfterMintModal />
                     <MintNotStartedYetModal />

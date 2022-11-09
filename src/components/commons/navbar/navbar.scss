@@ -32,7 +32,37 @@
             position: relative;
 
             &.is-active {
-                border-bottom: 3px solid $ww !important;
+                background-color: transparent !important;
+
+                @media screen and (max-width: 1024px) {
+                    span {
+                        position: relative;
+                        &::before,
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            width: 7px;
+                            height: 7px;
+                            background: $ww;
+                            top: 50%;
+                            border-radius: 50%;
+                        }
+
+                        &::before {
+                            left: -20px;
+                            transform: translate(-50%, -50%);
+                        }
+
+                        &::after {
+                            right: -20px;
+                            transform: translate(50%, -50%);
+                        }
+                    }
+                }
+
+                @media screen and (min-width: 1024px) {
+                    border-bottom: 3px solid $ww !important;
+                }
             }
 
             &:focus {

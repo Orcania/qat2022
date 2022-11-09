@@ -23,16 +23,16 @@ import { formatNumber, BigNum2NormalNum } from 'src/utils';
 
 import { rpcs } from 'celeste.config';
 
-import styles from './mint.module.scss';
+import styles from '../mint/mint.module.scss';
 
 const { inputs, crossmint_btn } = styles;
 
 const max = 100000;
 
-const MintModal = () => {
+const InfluencerMintModal = () => {
     // app state
     const dispatch = useDispatch();
-    const mintModal = useSelector(state => state.modalReducer[modals.MINTMODAL]);
+    const modal = useSelector(state => state.modalReducer[modals.INFLUENCER_MINT_MODAL]);
     const { web3Reducer, walletReducer } = useCelesteSelector(state => state);
 
     // local state
@@ -82,16 +82,18 @@ const MintModal = () => {
 
         // wait until tx has been sent or cancelled then open modal
 
-        // const txRes = nftController.buy({
-        //     from: walletReducer.address,
-        //     value,
-        // });
+        const { referralId } = modal.data;
 
         const txMethod = () =>
-            nftController.buy({
-                from: walletReducer.address,
-                value,
-            });
+            nftController.influencerBuy(
+                {
+                    referralId,
+                },
+                {
+                    from: walletReducer.address,
+                    value,
+                }
+            );
 
         dispatch(
             open_modal({
@@ -137,8 +139,8 @@ const MintModal = () => {
 
     return (
         <Dialog
-            visible={mintModal.isOpen}
-            header="GET YOUR TEAM"
+            visible={modal.isOpen}
+            header="GET YOUR TEAM R"
             onHide={closeModal}
             draggable={false}
             className="resize-manager"
@@ -255,7 +257,11 @@ const MintModal = () => {
                             className={`button is-fullwidth is-burgundy is-normal has-border-radius-10 ${crossmint_btn}`}
                             clientId="3d71cf98-b158-4371-a56f-97db0eeb9316"
                             disabled={+amount === 0}
-                            mintConfig={{ type: 'erc-721', totalPrice: (+amount * 0.05).toString() }}
+                            mintConfig={{
+                                type: 'erc-721',
+                                totalPrice: (+amount * 0.05).toString(),
+                                referralId: modal.data ? modal.data.referralId : '',
+                            }}
                             type="button"
                         >
                             Buy with card
@@ -263,11 +269,8 @@ const MintModal = () => {
                     </div>
                 </div>
             </form>
-            {/* <video autoPlay loop muted>
-                <source src="/media/video/mint.mp4" type="video/mp4" />
-            </video> */}
         </Dialog>
     );
 };
 
-export default MintModal;
+export default InfluencerMintModal;
