@@ -24,7 +24,12 @@ const MintNotStartedYetModal = () => {
         >
             <div>
                 <p>
-                    <b>Hey! Wait! Only few more days before we open the mint ;)</b>
+                    <b>
+                        If you are buying through a sponsor presale link, make sure to click on it again to be
+                        redirected to the sponsor buying page.
+                        <br /> <br />
+                        To all other buyers, we can&apos;t wait to welcome you on Nov-14 for the Public Sale.
+                    </b>
                 </p>
             </div>
         </Dialog>

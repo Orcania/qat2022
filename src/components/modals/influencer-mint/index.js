@@ -35,8 +35,6 @@ const InfluencerMintModal = () => {
     const modal = useSelector(state => state.modalReducer[modals.INFLUENCER_MINT_MODAL]);
     const { web3Reducer, walletReducer } = useCelesteSelector(state => state);
 
-    console.log(modal);
-
     // local state
     const [amount, setAmount] = useState(1);
     const [total, setTotal] = useState(0);

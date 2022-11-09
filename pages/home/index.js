@@ -52,21 +52,28 @@ const MintPage = () => {
 
     return (
         <div className="has-bg-burgundy " style={{ minHeight: '100vh' }}>
-            {homeReducer.isVideoActive ? (
-                <div
-                    className="videoo-container"
-                    style={{ height: '100%', overflow: 'hidden' }}
-                    ref={videoContainerRef}
-                >
-                    <video autoPlay loop muted>
-                        <source src="/media/video/promo.mp4" type="video/mp4" />
-                    </video>
-                </div>
-            ) : (
+            <div className="is-hidden-touch">
+                {homeReducer.isVideoActive ? (
+                    <div
+                        className="videoo-container"
+                        style={{ height: '100%', overflow: 'hidden' }}
+                        ref={videoContainerRef}
+                    >
+                        <video autoPlay loop muted>
+                            <source src="/media/video/promo.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                ) : (
+                    <div style={{ paddingTop: '6rem' }}>
+                        <BannerSection />
+                    </div>
+                )}
+            </div>
+            <div className="is-hidden-desktop">
                 <div style={{ paddingTop: '6rem' }}>
                     <BannerSection />
                 </div>
-            )}
+            </div>
         </div>
     );
 };
