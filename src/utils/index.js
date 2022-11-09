@@ -28,5 +28,5 @@ export const StringToHex = str => {
 };
 
 export const HexToBn = hex => {
-    return new BigNumber(hex, 16).toString();
+    return new BigNumber(hex, 16).toFixed(0).toString();
 };

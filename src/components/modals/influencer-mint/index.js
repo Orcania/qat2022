@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 /* eslint-disable @next/next/no-img-element */
 import { useEffect, useState, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
