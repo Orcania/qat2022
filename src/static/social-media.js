@@ -8,18 +8,24 @@ const data = [
     },
     {
         id: 2,
+        name: 'Instagram',
+        url: 'https://www.instagram.com/worldfantasycup_/',
+        icon: () => <i className="fab fa-instagram" />,
+    },
+    {
+        id: 3,
         name: 'Discord',
         url: 'https://discord.com/invite/zK5Zr7ExFu',
         icon: () => <i className="fab fa-discord" />,
     },
     {
-        id: 3,
+        id: 4,
         name: 'OpenSea',
         url: 'https://opensea.io/collection/worldfantasycup',
         icon: () => <i className="fa-solid fa-sailboat" />,
     },
     {
-        id: 4,
+        id: 5,
         name: 'Etherscan',
         url: 'https://etherscan.io/address/0x4751cc885f28feb633aa25cf4c487add8d2eb96b',
         icon: (theme = 'w') => {
