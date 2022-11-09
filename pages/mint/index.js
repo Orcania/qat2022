@@ -56,8 +56,12 @@ const MintPage = () => {
                             <br />
 
                             <div className="divbanner" style={{ display: 'grid', placeItems: 'center' }}>
-                                <button className="mint-button" type="button" onClick={onMintClick}>
-                                    Mint
+                                <button
+                                    className="button is-blue has-font-akira is-large"
+                                    type="button"
+                                    onClick={onMintClick}
+                                >
+                                    Get a team
                                 </button>
                             </div>
 

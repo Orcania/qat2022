@@ -259,7 +259,7 @@ const InfluencerMintModal = () => {
                             disabled={+amount === 0}
                             mintConfig={{
                                 type: 'erc-721',
-                                totalPrice: (+amount * 0.05).toString(),
+                                totalPrice: BigNum2NormalNum(total).toString(),
                                 referralId: modal.data ? modal.data.referralId : '',
                             }}
                             type="button"

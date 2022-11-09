@@ -255,7 +255,7 @@ const MintModal = () => {
                             className={`button is-fullwidth is-burgundy is-normal has-border-radius-10 ${crossmint_btn}`}
                             clientId="3d71cf98-b158-4371-a56f-97db0eeb9316"
                             disabled={+amount === 0}
-                            mintConfig={{ type: 'erc-721', totalPrice: (+amount * 0.05).toString() }}
+                            mintConfig={{ type: 'erc-721', totalPrice: BigNum2NormalNum(total).toString() }}
                             type="button"
                         >
                             Buy with card
