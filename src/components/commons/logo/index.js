@@ -6,9 +6,9 @@ const { logo, title, img } = styles;
 const LogoComponent = () => {
     return (
         <div className={`is-flex is-align-items-center ${logo}`}>
-            {/* <img src="/media/logo2.webp" alt="" width="150px" id={img} /> */}
+            <img src="/media/logo2.webp" alt="" width="150px" id={img} />
             <div className="has-text-left" style={{ position: 'relative' }}>
-                <h1 className={`title is-1 has-text-ww has-font-akira mb-0 has-text-centered-mobile ${title}`}>
+                <h1 className={`title is-1 has-text-ww has-font-akira mb-0 ${title}`} style={{ fontSize: '4rem' }}>
                     WORLD <br /> FANTASY <br /> CUP
                 </h1>
             </div>

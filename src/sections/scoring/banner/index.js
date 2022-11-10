@@ -1,7 +1,7 @@
 const ScoreBanner = () => {
     return (
-        <section style={{ height: 'auto', marginBottom: '5rem' }}>
-            <h1 className="subtitle has-text-white has-font-akira has-text-centered is-2">
+        <section style={{ marginBottom: '5rem' }}>
+            <h1 className="subtitle has-text-white has-font-qatar has-text-centered is-2">
                 <b>Points per Player if his Team</b>
             </h1>
             <div id="cooltable-wrapper" className="is-flex is-justify-content-center">
