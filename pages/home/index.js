@@ -21,11 +21,11 @@ const MintPage = () => {
         // is user touches the screen, change isVideoActive to false
         // if user scrolls, change isVideoActive to false
 
-        if (!videoContainerRef.current || done) return undefined;
+        const containerDiv = videoContainerRef.current;
+
+        if (!containerDiv || done) return undefined;
 
         const c = () => {
-            const containerDiv = videoContainerRef.current;
-
             containerDiv.classList.add('vanish');
 
             dispatch(set_music(true));
@@ -51,8 +51,13 @@ const MintPage = () => {
     }, [dispatch, done]);
 
     return (
-        <div className="has-bg-burgundy " style={{ minHeight: '100vh' }}>
-            <div className="is-hidden-touch">
+        <div className="has-bg-burgundy whole-c" style={{ minHeight: 'calc(100vh - 80px)' }}>
+            <div className="dec-container">
+                <div className="ball dec-1" />
+                <div className="ball dec-2" />
+                <div className="ball dec-3" />
+            </div>
+            <div className="is-hidden-touch is-hiddean">
                 {homeReducer.isVideoActive ? (
                     <div
                         className="videoo-container"
@@ -64,13 +69,13 @@ const MintPage = () => {
                         </video>
                     </div>
                 ) : (
-                    <div style={{ paddingTop: '6rem' }}>
+                    <div style={{ paddingTop: '0rem' }}>
                         <BannerSection />
                     </div>
                 )}
             </div>
             <div className="is-hidden-desktop">
-                <div style={{ paddingTop: '6rem' }}>
+                <div style={{ paddingTop: '0rem' }}>
                     <BannerSection />
                 </div>
             </div>

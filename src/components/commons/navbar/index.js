@@ -26,7 +26,6 @@ const Navbar = () => {
     const [mobileActive, setMobileActive] = useState(false);
     const [burgerActive, setBurgerActive] = useState(false);
     const [bgColor, setBgColor] = useState(false);
-    const [scrollingDown, setScrollingDown] = useState(false);
 
     const { walletReducer } = useCelesteSelector(state => state);
     // const { globalReducer } = useSelector(state => state);
@@ -62,32 +61,25 @@ const Navbar = () => {
     };
 
     useEffect(() => {
-        const elmnt = document.getElementById('__next');
-        let oldScroll = 0;
-        elmnt.addEventListener('scroll', () => {
-            if (elmnt.scrollTop > 50) setBgColor(true);
+        window.addEventListener('scroll', () => {
+            if (+window.scrollY > 50) setBgColor(true);
             else setBgColor(false);
-
-            if (oldScroll && oldScroll > elmnt.scrollTop) setScrollingDown(false);
-            else setScrollingDown(true);
-
-            oldScroll = elmnt.scrollTop;
         });
     }, []);
 
     return (
         <nav
-            className={`navbar custom-navbar is-fixed-top has-bg-darkgrey ${bgColor ? 'has-navbar-bg-color' : ''} 
-            ${scrollingDown ? 'is-hidden-up' : ''}`}
+            className={`navbar custom-navbar is-fixed-top  ${
+                bgColor ? 'has-bg-burgundy-o-8 has-bg-blur-1' : 'has-bg-transparent'
+            }`}
             role="navigation"
             aria-label="main navigation"
         >
             <div className="container">
                 <div className="navbar-brand  py-2">
                     <Link href="/home">
-                        <a className="navbar-item is-hidden-desktop" onClick={handleNavbarItemClick} role="button">
-                            {/* <img src="./media/logo.png" width="120" alt="" /> */}
-                            <h1 className="title is-4 has-text-white has-font-akira">W F C</h1>
+                        <a className="navbar-item " onClick={handleNavbarItemClick} role="button">
+                            <img src="/media/logo2.webp" alt="" />
                         </a>
                     </Link>
 
@@ -178,11 +170,11 @@ const Navbar = () => {
 
                     <div className="navbar-end">
                         <div className="navbar-item spc">
-                            {socialMedia.map(item => (
+                            {/* {socialMedia.map(item => (
                                 <a key={item.id} href={item.url} target="_blank" rel="noreferrer" className="mx-4">
                                     <span className="icon is-size-4">{item.icon()}</span>
                                 </a>
-                            ))}
+                            ))} */}
                             <button
                                 type="button"
                                 className="unstyled-button is-hidden-touch mx-4"
@@ -200,22 +192,23 @@ const Navbar = () => {
                             disconnectedComponent={
                                 <div className="navbar-item botoncito">
                                     <button
-                                        id="connect-button"
-                                        className="ccbutton navbar-button connbtn"
+                                        className="button is-blue is-rounded connect-btn"
                                         type="button"
                                         onClick={handleOpenWalletsModal}
-                                        data-content="Connect"
-                                    />
+                                    >
+                                        <b>Connect</b>
+                                    </button>
                                 </div>
                             }
                         >
-                            <div className="navbar-item botoncito">
+                            <div className="navbar-item ">
                                 <button
-                                    className="ccbutton navbar-button "
+                                    className="button is-blue is-rounded connect-btn"
                                     type="button"
                                     onClick={handleOpenWalletAccountModal}
-                                    data-content={walletReducer.address && getAddressReduced(walletReducer.address)}
-                                />
+                                >
+                                    <b>{walletReducer.address && getAddressReduced(walletReducer.address)}</b>
+                                </button>
                             </div>
                         </ConnectedWrapper>
                     </div>
