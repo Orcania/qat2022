@@ -77,6 +77,12 @@
 }
 
 .videoo-container {
+    height: calc(100vh - 80px);
+    overflow: hidden;
+
+    display: grid;
+    place-items: center;
+
     &.vanish {
         animation: vanish 2s ease-in-out;
     }

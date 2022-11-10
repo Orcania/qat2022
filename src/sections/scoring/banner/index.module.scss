@@ -1,0 +1,57 @@
+@import 'src/scss/vars';
+
+#container {
+    @media screen and (min-width: 1216px) {
+        display: flex;
+        justify-content: center;
+
+        > div {
+            width: 75%;
+
+            > div {
+                &:first-child {
+                    transform: rotate(-4deg);
+                    transform-origin: bottom center;
+                }
+                &:nth-child(2) {
+                    position: relative;
+                    top: -40px;
+                }
+                &:nth-child(3) {
+                    transform: rotate(4deg);
+                    transform-origin: bottom center;
+                }
+
+                > div {
+                    box-shadow: 0px 10px 55px rgba($ww, 0.12);
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1215px) {
+        display: flex;
+        justify-content: center;
+        > div {
+            width: 100%;
+            > div {
+                &:first-child {
+                    transform: rotate(-4deg);
+                    transform-origin: bottom center;
+                }
+                &:nth-child(2) {
+                    position: relative;
+                    top: -40px;
+                }
+                &:nth-child(3) {
+                    transform: rotate(4deg);
+                    transform-origin: bottom center;
+                }
+
+                > div {
+                    box-shadow: 0px 10px 55px rgba($ww, 0.12);
+                }
+            }
+        }
+    }
+}
