@@ -43,6 +43,15 @@ const RulesSection = () => {
                                 </ol>
                             </li>
                             <li className="pb-3">Bought on Secondary market vs Minted on the WFC’s website.</li>
+                            <li className="pb-3">
+                                If after applying all the above mentioned differentiators we still have a similar score
+                                between two different teams, these two teams will then split the total earnings
+                                allocated to their rank.
+                                <br /> <br />
+                                (Example: If Team X is ranked number 1 and Team Y is also ranked number 1; these two
+                                teams will split the total earnings of Rank 1 and 2. Team X will receive 2.5% and Team Y
+                                will also receive 2.5%).
+                            </li>
                         </ol>
                     </p>
                 </div>

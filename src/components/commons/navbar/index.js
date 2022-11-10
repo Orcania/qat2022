@@ -151,7 +151,7 @@ const Navbar = () => {
                                 onClick={handleNavbarItemClick}
                                 role="button"
                             >
-                                <span> VAR</span>
+                                <span> Project</span>
                             </a>
                         </Link>
 
