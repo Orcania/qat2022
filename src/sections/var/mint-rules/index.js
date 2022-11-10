@@ -11,7 +11,7 @@ const MintRulesSection = () => {
                 World Fantasy Cup&apos;s supply is capped to 100,000 NFT Teams.
                 <br />
                 <br />
-                The Public Mint Price is 0.05 ETH per NFT before the start of the official World Cup,
+                The Mint Price is 0.05 ETH per NFT before the start of the official World Cup,
                 <br /> and 0.1 ETH after the start of the official World Cup.
             </p>
         </section>

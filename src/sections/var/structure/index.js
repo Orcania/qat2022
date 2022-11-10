@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 const data = [
     {
         id: 1,
@@ -50,11 +49,8 @@ const data = [
 const StructureSection = () => {
     return (
         <section className="px-2" style={{ marginBottom: '5rem' }}>
-            <h1 className="cooltitle3 has-text-centered has-font-akira mb-6 p">
-                Prizes <br />
-                Structure
-            </h1>
-            <div className="is-flex is-justify-content-center is-flex-direction-column is-align-items-center">
+            <h1 className="cooltitle3 has-text-centered has-font-akira mb-6 p-5">Structure</h1>
+            <div className="is-flex is-justify-content-center">
                 <table className="cooltable2 table is-fullwidth is-hoverable has-bg-burgundy" style={{ width: '40vw' }}>
                     <thead>
                         <tr>
@@ -79,14 +75,6 @@ const StructureSection = () => {
                         ))}
                     </tbody>
                 </table>
-
-                <br />
-                <br />
-
-                <div>
-                    <img src="/media/chart.jpeg" alt="" style={{ width: '40vw' }} className="is-hidden-touch" />
-                    <img src="/media/chart.jpeg" alt="" style={{ width: '90vw' }} className="is-hidden-desktop" />
-                </div>
             </div>
         </section>
     );

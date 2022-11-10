@@ -23,6 +23,6 @@ const VarPage = () => {
     );
 };
 
-VarPage.getLayout = page => getPageTitleLayout(getMainLayout(getSectionLayout(page, 'Project')), 'Project');
+VarPage.getLayout = page => getPageTitleLayout(getMainLayout(getSectionLayout(page, 'VAR')), 'Var');
 
 export default VarPage;
