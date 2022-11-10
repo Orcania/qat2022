@@ -54,11 +54,7 @@ const MintPage = () => {
         <div className="has-bg-burgundy " style={{ minHeight: '100vh' }}>
             <div className="is-hidden-touch">
                 {homeReducer.isVideoActive ? (
-                    <div
-                        className="videoo-container"
-                        style={{ height: '100%', overflow: 'hidden' }}
-                        ref={videoContainerRef}
-                    >
+                    <div className="videoo-container" ref={videoContainerRef}>
                         <video autoPlay loop muted>
                             <source src="/media/video/promo.mp4" type="video/mp4" />
                         </video>

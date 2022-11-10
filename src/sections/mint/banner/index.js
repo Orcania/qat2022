@@ -13,9 +13,11 @@ const BannerSection = () => {
     const dispath = useDispatch();
 
     const [timeLeft, live] = useCountdown(1668960000000);
+    // eslint-disable-next-line no-unused-vars
+    const [timeLeft2, mintLive] = useCountdown(1668168000000);
 
     const onMintClick = () => {
-        if (live) {
+        if (mintLive) {
             dispath(open_modal({ modalName: modals.MINTMODAL }));
         } else {
             dispath(open_modal({ modalName: modals.MINTNOTSTARTEDMODAL }));
