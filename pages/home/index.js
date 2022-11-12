@@ -52,11 +52,6 @@ const MintPage = () => {
 
     return (
         <div className="has-bg-burgundy whole-c" style={{ minHeight: 'calc(100vh - 80px)' }}>
-            <div className="dec-container">
-                <div className="ball dec-1" />
-                <div className="ball dec-2" />
-                <div className="ball dec-3" />
-            </div>
             <div className="is-hidden-touch">
                 {homeReducer.isVideoActive ? (
                     <div className="videoo-container" style={{}} ref={videoContainerRef}>
@@ -65,7 +60,7 @@ const MintPage = () => {
                         </video>
                     </div>
                 ) : (
-                    <div style={{ paddingTop: '0rem' }}>
+                    <div style={{ paddingTop: '0rem', height: '100%' }}>
                         <BannerSection />
                     </div>
                 )}

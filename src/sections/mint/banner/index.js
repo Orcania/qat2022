@@ -23,9 +23,12 @@ const BannerSection = () => {
     };
 
     return (
-        <section className="banner" style={{ minHeight: '100vh' }}>
-            <div className="container px-5">
-                <div className="cc pt-a" style={{ minHeight: '100%' }}>
+        <section className="banner ">
+            <div className="container px-5 ">
+                <div
+                    className="cc pt-a is-flex is-flex-direction-column is-justify-content-space-evenly"
+                    style={{ minHeight: '90vh' }}
+                >
                     <div className="columns">
                         <div className="column ">
                             <Logo />

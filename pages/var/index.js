@@ -14,9 +14,10 @@ const VarPage = () => {
             <br />
             <br />
             <br />
-            <ClasificationSection />
-            <MintRulesSection />
-            <DescriptionSection />
+            {/* <ClasificationSection />
+        
+            <DescriptionSection /> */}
+            {/* <MintRulesSection /> */}
             <PrizesSection />
             <StructureSection />
         </div>

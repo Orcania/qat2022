@@ -1,6 +1,12 @@
+/* eslint-disable @next/next/no-img-element */
 import styles from './buy.module.scss';
 
-const { container } = styles;
+import { open_modal } from 'src/redux/actions';
+
+import modals from 'src/static/app.modals';
+import { useDispatch } from 'react-redux';
+
+const { container, root, cardImg, card_c } = styles;
 
 const data = [
     {
@@ -21,15 +27,21 @@ const data = [
 ];
 
 const HowToBuy = () => {
+    const dispath = useDispatch();
+
+    const openMintModal = () => {
+        dispath(open_modal({ modalName: modals.MINTMODAL }));
+    };
+
     return (
-        <section className="px-2" style={{ marginBottom: '5rem' }}>
-            <h1 className="cooltitle3 has-text-centered has-font-akira mb-6 p-5">How to buy</h1>
+        <section className={`px-2 ${root}`} style={{ marginBottom: '5rem' }}>
+            <h1 className="subtitle has-text-ww has-font-akira has-text-centered is-3">How to buy</h1>
             <br />
             <div className="has-text-white has-font-qatar is-size-5 has-text-justified">
                 <div className={container}>
                     {data.map(item => (
                         <div className="mb-6" key={item.id}>
-                            <figure className="image is-16by9 has-border-3-ww-o-100">
+                            <figure className="image is-16by9 has-border-2-ww-o-25">
                                 <iframe
                                     src={item.videoSrc}
                                     className="has-ratio"
@@ -43,6 +55,23 @@ const HowToBuy = () => {
                             <h1 className="subtitle has-text-white has-text-centered mt-6">{item.title}</h1>
                         </div>
                     ))}
+                </div>
+                <div className={`has-text-centered ${card_c}`}>
+                    <br />
+                    <br />
+                    <div className="is-hidden-desktop">
+                        <br />
+                        <br />
+                    </div>
+                    <img src="/media/howitworks/card.png" alt="" id={cardImg} />
+                    <button
+                        className="button is-blue has-font-akira is-medium shadow2"
+                        type="button"
+                        onClick={openMintModal}
+                        style={{ padding: '2rem 2.5rem' }}
+                    >
+                        Buy now
+                    </button>
                 </div>
             </div>
         </section>
