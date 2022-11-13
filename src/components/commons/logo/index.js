@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import styles from './logo.module.scss';
 
-const { logo, title, img } = styles;
+const { logo, title } = styles;
 
 const LogoComponent = () => {
     return (

@@ -1,3 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
+import styles from './prizes.module.scss';
+
+const { root, box } = styles;
+
 const data = [
     {
         id: 1,
@@ -48,46 +53,51 @@ const data = [
 
 const PrizesSection = () => {
     return (
-        <section className="px-2" style={{ marginBottom: '8rem' }}>
-            <div className="has-text-white is-size-5">
-                <div className="columns ">
-                    <div className="column">
-                        <h1 className="title is-1  has-font-akira has-text-ww  mb-6 ">Prizes</h1>
-                        <p>
-                            World Fantasy Cup&apos;s prizes will be distributed 72 hours after the final whistle of
-                            theFIFA World Cup Final game.The prizes value will be equivalent to the mint percentage
-                            listed in the structure below.
-                        </p>
-                    </div>
-                    <div className="column is-flex is-justify-content-center">
-                        <table
-                            className="cooltable2 table is-fullwidth is-hoverable has-bg-burgundy"
-                            style={{ width: '80%' }}
-                        >
-                            <thead>
-                                <tr>
-                                    <th className="subtitle has-text-left has-text-white has-font-qatar is-4 px-6">
-                                        <b>Team Rank</b>
-                                    </th>
-                                    <th className="subtitle has-text-left has-text-white has-font-qatar is-4 px-6">
-                                        <b> Mint % per Team</b>
-                                    </th>
+        <section className="" style={{ marginBottom: '8rem' }} id={root}>
+            <div className={`${box} is-hidden-mobile`}>
+                <h1 className="title has-text-ww has-font-akira is-4">
+                    How will the <br /> prizes be <br /> distributed ?
+                </h1>
+                <p className=" is-size-5 has-text-ww">The prizes will be distributed as crypto gift cards.</p>
+                <img src="/media/project/prize.png" alt="" />
+            </div>
+            <div className="columns px-2">
+                <div className="column">
+                    <h1 className="title is-1  has-font-akira has-text-ww  mb-6 has-text-centered-mobile">Prizes</h1>
+                    <p className=" is-size-5 has-text-ww">
+                        World Fantasy Cup&apos;s prizes will be distributed 72 hours after the final whistle of theFIFA
+                        World Cup Final game.The prizes value will be equivalent to the mint percentage listed in the
+                        structure below.
+                    </p>
+                </div>
+                <div className="column is-flex is-justify-content-center">
+                    <table
+                        className="cooltable2 table is-fullwidth is-hoverable has-bg-burgundy"
+                        style={{ width: '85%' }}
+                    >
+                        <thead>
+                            <tr>
+                                <th className="subtitle has-text-left has-text-white has-font-qatar is-6 px-6 py-4">
+                                    <b>Team Rank</b>
+                                </th>
+                                <th className="subtitle has-text-left has-text-white has-font-qatar is-6 px-6 py-4">
+                                    <b> Mint % per Team</b>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {data.map(item => (
+                                <tr key={item.id}>
+                                    <td className="subtitle has-text-left has-text-white has-font-qatar px-6 is-size-6 py-4">
+                                        <b>{item.team_rank}</b>
+                                    </td>
+                                    <td className="subtitle has-text-left has-text-white has-font-qatar px-6 is-size-6 py-4">
+                                        {item.pctg}%
+                                    </td>
                                 </tr>
-                            </thead>
-                            <tbody>
-                                {data.map(item => (
-                                    <tr key={item.id}>
-                                        <td className="subtitle has-text-left has-text-white has-font-qatar px-6">
-                                            <b>{item.team_rank}</b>
-                                        </td>
-                                        <td className="subtitle has-text-left has-text-white has-font-qatar px-6">
-                                            {item.pctg}%
-                                        </td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </div>
+                            ))}
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </section>

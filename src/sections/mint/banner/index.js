@@ -3,8 +3,6 @@ import { useDispatch } from 'react-redux';
 
 import Logo from 'src/components/commons/logo';
 
-import useCountdown from 'src/hooks/useCountdown';
-
 import { open_modal } from 'src/redux/actions';
 
 import modals from 'src/static/app.modals';
@@ -12,14 +10,10 @@ import modals from 'src/static/app.modals';
 const BannerSection = () => {
     const dispath = useDispatch();
 
-    const [timeLeft, live] = useCountdown(1668960000000);
+    // eslint-disable-next-line no-unused-vars
 
     const onMintClick = () => {
-        if (live) {
-            dispath(open_modal({ modalName: modals.MINTMODAL }));
-        } else {
-            dispath(open_modal({ modalName: modals.MINTNOTSTARTEDMODAL }));
-        }
+        dispath(open_modal({ modalName: modals.MINTMODAL }));
     };
 
     return (

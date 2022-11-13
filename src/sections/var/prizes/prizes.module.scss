@@ -1,0 +1,28 @@
+@import 'src/scss/vars';
+
+#root {
+    min-height: calc(100vh - 80px);
+    position: relative;
+}
+
+.box {
+    position: absolute;
+    bottom: 0;
+
+    padding: 2rem 10rem 2rem 2rem;
+
+    background-color: $blue;
+
+    width: 45%;
+
+    border-radius: 0 200px 0 0;
+
+    img {
+        position: absolute;
+        height: 80%;
+        bottom: 0;
+        right: 0;
+
+        transform: translate(20%);
+    }
+}

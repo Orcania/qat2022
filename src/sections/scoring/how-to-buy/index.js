@@ -1,10 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
-import styles from './buy.module.scss';
 
 import { open_modal } from 'src/redux/actions';
 
 import modals from 'src/static/app.modals';
 import { useDispatch } from 'react-redux';
+
+import styles from './buy.module.scss';
 
 const { container, root, cardImg, card_c } = styles;
 

@@ -11,7 +11,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useCelesteSelector, ConnectedWrapper } from '@celeste-js/react';
 
 import { open_modal, set_music } from 'src/redux/actions';
-import socialMedia from 'src/static/social-media';
 import modals from 'src/static/app.modals';
 
 const getAddressReduced = address => `${address.slice(0, 6)}...${address.slice(-4)}`;
