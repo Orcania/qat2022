@@ -1,15 +1,17 @@
 @use 'sass:map';
 
-$burgundy: #000000;
+$burgundy: #1a1a1a;
+$dark2: #1e1e1e;
 $darkgrey: #3b3838;
 $grey: #ebebeb;
-$ww: #ffffff;
+$ww: #f2f2f2;
 $gold: #c8af86;
 $orange: #e54104;
-$blue: #4a6be7;
+$blue: #3e6eee;
 
 $hcolors: (
     burgundy: $burgundy,
+    dark2: $dark2,
     darkgrey: $darkgrey,
     ww: $ww,
     gold: $gold,

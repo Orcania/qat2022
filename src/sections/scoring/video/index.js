@@ -5,7 +5,7 @@ const { container } = styles;
 const VideoSection = () => {
     return (
         <section className="px-2" style={{ marginBottom: '5rem' }}>
-            <h1 className="cooltitle3 has-text-centered has-font-akira mb-6 p-4">
+            <h1 className="subtitle has-text-ww has-font-akira has-text-centered is-3">
                 Game
                 <br /> simulation
             </h1>

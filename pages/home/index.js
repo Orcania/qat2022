@@ -21,11 +21,11 @@ const MintPage = () => {
         // is user touches the screen, change isVideoActive to false
         // if user scrolls, change isVideoActive to false
 
-        if (!videoContainerRef.current || done) return undefined;
+        const containerDiv = videoContainerRef.current;
+
+        if (!containerDiv || done) return undefined;
 
         const c = () => {
-            const containerDiv = videoContainerRef.current;
-
             containerDiv.classList.add('vanish');
 
             dispatch(set_music(true));
@@ -51,22 +51,22 @@ const MintPage = () => {
     }, [dispatch, done]);
 
     return (
-        <div className="has-bg-burgundy " style={{ minHeight: '100vh' }}>
+        <div className="has-bg-burgundy whole-c" style={{ minHeight: 'calc(100vh - 80px)' }}>
             <div className="is-hidden-touch">
                 {homeReducer.isVideoActive ? (
-                    <div className="videoo-container" ref={videoContainerRef}>
+                    <div className="videoo-container" style={{}} ref={videoContainerRef}>
                         <video autoPlay loop muted>
                             <source src="/media/video/promo.mp4" type="video/mp4" />
                         </video>
                     </div>
                 ) : (
-                    <div style={{ paddingTop: '6rem' }}>
+                    <div style={{ paddingTop: '0rem', height: '100%' }}>
                         <BannerSection />
                     </div>
                 )}
             </div>
             <div className="is-hidden-desktop">
-                <div style={{ paddingTop: '6rem' }}>
+                <div style={{ paddingTop: '0rem' }}>
                     <BannerSection />
                 </div>
             </div>

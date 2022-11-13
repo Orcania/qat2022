@@ -1,52 +1,98 @@
+/* eslint-disable @next/next/no-img-element */
+import styles from './index.module.scss';
+
+const { container, img_container, root } = styles;
+
 const ScoreBanner = () => {
     return (
-        <section style={{ marginBottom: '5rem' }}>
-            <h1 className="subtitle has-text-white has-font-qatar has-text-centered is-2">
-                <b>Points per Player if his Team</b>
+        <section
+            className={`is-flex is-flex-direction-column is-justify-content-space-between px-3 ${root} mb-6`}
+            style={{ minHeight: '100vh', background: 'transparent' }}
+        >
+            <div className={` ${img_container} is-hidden-mobile`}>
+                <img src="/media/howitworks/star.png" alt="star" />
+                <img src="/media/howitworks/line.png" alt="" />
+            </div>
+
+            <h1 className="subtitle has-text-ww has-font-akira has-text-centered is-3">
+                Points per Player if his Team
             </h1>
-            <div id="cooltable-wrapper" className="is-flex is-justify-content-center">
-                <table className="cooltable table has-bg-burgundy ">
-                    <thead>
-                        <tr>
-                            <th className="has-bottom-border-white has-top-border-white">
-                                <h1 className="subtitle has-text-white is-2 has-text-centered has-font-qatar">
-                                    <b>Wins</b>
-                                </h1>
-                            </th>
 
-                            <th className="has-bottom-border-white has-top-border-white">
-                                <h1 className="subtitle has-text-white is-2 has-text-centered has-font-qatar">
-                                    <b>Draws</b>
-                                </h1>
-                            </th>
+            <div id={container}>
+                <div className="columns is-variable is-8">
+                    <div className="column">
+                        <div className="box has-bg-white">
+                            <h1
+                                className="title has-text-centered has-font-montserrat"
+                                style={{ fontSize: '4rem', fontWeight: '900' }}
+                            >
+                                0
+                            </h1>
+                            <div>
+                                <figure className="image is-square">
+                                    <img src="/media/howitworks/loses.png" alt="" />
+                                </figure>
+                            </div>
+                            <h1 className="title has-text-centered has-font-akira">loses</h1>
+                        </div>
+                    </div>
+                    <div className="column">
+                        <div className="box has-bg-white">
+                            <h1
+                                className="title has-text-centered has-font-montserrat"
+                                style={{ fontSize: '4rem', fontWeight: '900' }}
+                            >
+                                +3
+                            </h1>
+                            <div>
+                                <figure className="image is-square">
+                                    <img src="/media/howitworks/wins.png" alt="" />
+                                </figure>
+                            </div>
+                            <h1 className="title has-text-centered has-font-akira">wins</h1>
+                        </div>
+                    </div>
+                    <div className="column">
+                        <div className="box has-bg-white">
+                            <h1
+                                className="title has-text-centered has-font-montserrat"
+                                style={{ fontSize: '4rem', fontWeight: '900' }}
+                            >
+                                +1
+                            </h1>
+                            <div>
+                                <figure className="image is-square">
+                                    <img src="/media/howitworks/draws.png" alt="" />
+                                </figure>
+                            </div>
+                            <h1 className="title has-text-centered has-font-akira">draws</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                            <th className="has-bottom-border-white has-top-border-white">
-                                <h1 className="subtitle has-text-white is-2 has-text-centered has-font-qatar">
-                                    <b>Loses</b>
-                                </h1>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <h1 className="subtitle is-2 has-text-white has-text-centered has-font-qatar">
-                                    <b>+3</b>
-                                </h1>
-                            </td>
-                            <td>
-                                <h1 className="subtitle is-2 has-text-white has-text-centered has-font-qatar">
-                                    <b>+1</b>
-                                </h1>
-                            </td>
-                            <td>
-                                <h1 className="subtitle is-2 has-text-white has-text-centered has-font-qatar">
-                                    <b>0</b>
-                                </h1>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div className="is-hidden-desktop">
+                <br />
+                <br />
+            </div>
+
+            <div>
+                <div className="buttons is-justify-content-center">
+                    <button
+                        className="button is-blue has-font-akira is-medium shadow2"
+                        type="button"
+                        style={{ paddingTop: '2rem', paddingBottom: '2rem' }}
+                    >
+                        Get started
+                    </button>
+                    <button
+                        className="button is-blue has-font-akira is-medium shadow2 outlined"
+                        type="button"
+                        style={{ paddingTop: '2rem', paddingBottom: '2rem' }}
+                    >
+                        Project
+                    </button>
+                </div>
             </div>
         </section>
     );

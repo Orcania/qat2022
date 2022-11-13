@@ -1,7 +1,7 @@
 const RulesSection = () => {
     return (
         <section className="px-2" style={{ marginBottom: '5rem' }}>
-            <h1 className="cooltitle2 has-text-centered has-font-akira mb-6">Rules</h1>
+            <h1 className="subtitle has-text-ww has-font-akira has-text-centered is-3">Rules</h1>
             <br />
             <p className="has-text-white has-font-qatar is-size-5 has-text-centered">
                 The scoring mechanism will work as follows:

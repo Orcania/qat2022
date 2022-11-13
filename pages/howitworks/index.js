@@ -34,15 +34,6 @@ const ScoringPage = () => {
 };
 
 ScoringPage.getLayout = page =>
-    getPageTitleLayout(
-        getMainLayout(
-            getSectionLayout(page, () => (
-                <span className="ignore-font">
-                    How it <br /> works
-                </span>
-            ))
-        ),
-        'How it works'
-    );
+    getPageTitleLayout(getMainLayout(getSectionLayout(page, 'How it works')), 'How it works');
 
 export default ScoringPage;

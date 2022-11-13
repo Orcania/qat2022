@@ -3,8 +3,6 @@ import { useDispatch } from 'react-redux';
 
 import Logo from 'src/components/commons/logo';
 
-import useCountdown from 'src/hooks/useCountdown';
-
 import { open_modal } from 'src/redux/actions';
 
 import modals from 'src/static/app.modals';
@@ -12,32 +10,57 @@ import modals from 'src/static/app.modals';
 const BannerSection = () => {
     const dispath = useDispatch();
 
-    const [timeLeft, live] = useCountdown(1668960000000);
     // eslint-disable-next-line no-unused-vars
-    const [timeLeft2, mintLive] = useCountdown(1668168000000);
 
     const onMintClick = () => {
-        if (mintLive) {
-            dispath(open_modal({ modalName: modals.MINTMODAL }));
-        } else {
-            dispath(open_modal({ modalName: modals.MINTNOTSTARTEDMODAL }));
-        }
+        dispath(open_modal({ modalName: modals.MINTMODAL }));
     };
 
     return (
-        <section className="banner" style={{ minHeight: '100vh' }}>
-            <div className="container px-5">
-                <div className="cc pt-6" style={{ minHeight: '100%' }}>
-                    <div className="mb-5">
-                        <Logo />
-                        <br />
-                        <h1 className="subtitle  has-text-white  has-font-qatar has-text-centered-mobile is-size-6">
-                            Register and Mint your NFT. <br />
-                            Activate your legendary fantasy football team and collect points. <br />
-                            Play the unofficial Fantasy game of the World Cup & Make your winnings official.
-                        </h1>
+        <section className="banner ">
+            <div className="container px-5 ">
+                <div
+                    className="cc pt-a is-flex is-flex-direction-column is-justify-content-space-evenly"
+                    style={{ minHeight: '90vh' }}
+                >
+                    <div className="columns">
+                        <div className="column ">
+                            <Logo />
+                            <br />
+                            <h1 className="subtitle  has-text-white  has-font-qatar has-text-centered-mobile is-size-6">
+                                Register and Mint your NFT. Activate your legendary fantasy football team and collect
+                                points.Play the unofficial Fantasy game of the World Cup & Make your winnings official.
+                            </h1>
+                        </div>
+                        <div className="column">
+                            <figure className="image is-16by9 has-border-2-ww-o-100">
+                                <iframe
+                                    src="https://youtube.com/embed/EfQ5ytGTmgc"
+                                    className="has-ratio"
+                                    width="640"
+                                    height="360"
+                                    frameBorder="0"
+                                    allowFullScreen
+                                    title="Game simulation"
+                                />
+                            </figure>
+                            <br />
+                            <h1 className="subtitle  has-text-ww  has-text-centered-mobile">
+                                <span className="has-font-akira mr-5"> How does it work?</span>
+                                <span className="is-hidden-mobile"> Learn more</span>
+                            </h1>
+                        </div>
                     </div>
-                    <br />
+                    <div className="has-text-centered-mobile">
+                        <button
+                            className="button is-blue is-medium has-font-akira py-5 connect-btn"
+                            type="button"
+                            onClick={onMintClick}
+                        >
+                            Get a team
+                        </button>
+                    </div>
+                    {/* <br />
                     <br />
                     <br />
                     <br />
@@ -68,7 +91,7 @@ const BannerSection = () => {
                     <div className="divbanner" style={{ display: 'grid', placeItems: 'center' }}>
                         <img src="/media/phones.png" alt="" width="75%" className="is-hidden-touch" />
                         <img src="/media/phones.png" alt="" width="100%" className="is-hidden-desktop" />
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </section>

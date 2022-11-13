@@ -77,7 +77,7 @@
 }
 
 .videoo-container {
-    height: calc(100vh - 75px);
+    height: calc(100vh - 80px);
     overflow: hidden;
 
     display: grid;
@@ -104,4 +104,8 @@
     100% {
         opacity: 0;
     }
+}
+
+.whole-c {
+    position: relative;
 }
