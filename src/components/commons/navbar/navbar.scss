@@ -22,6 +22,11 @@
                             background-color: lighten($blue, 10) !important;
                         }
                     }
+                    @media screen and (max-width: 1024px) {
+                        span {
+                            background-color: transparent !important;
+                        }
+                    }
                 }
             }
         }
@@ -91,7 +96,7 @@
             max-height: 100vh !important;
 
             transition: 1s;
-            transform: translateX(-100%);
+            transform: translateX(100%);
 
             display: block;
 
@@ -107,6 +112,12 @@
                 .navbar-item {
                     text-align: center !important;
                     font-size: 1.5rem;
+
+                    background-color: transparent;
+
+                    .is-active {
+                        background-color: transparent;
+                    }
                 }
             }
 

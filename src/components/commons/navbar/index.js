@@ -191,7 +191,7 @@ const Navbar = () => {
                             disconnectedComponent={
                                 <div className="navbar-item botoncito">
                                     <button
-                                        className="button is-blue is-rounded connect-btn"
+                                        className="button is-blue is-rounded connect-btn is-fullwidth"
                                         type="button"
                                         onClick={handleOpenWalletsModal}
                                     >
@@ -202,7 +202,7 @@ const Navbar = () => {
                         >
                             <div className="navbar-item ">
                                 <button
-                                    className="button is-blue is-rounded connect-btn"
+                                    className="button is-blue is-rounded connect-btn is-fullwidth"
                                     type="button"
                                     onClick={handleOpenWalletAccountModal}
                                 >

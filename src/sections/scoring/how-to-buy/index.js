@@ -57,7 +57,7 @@ const HowToBuy = () => {
                         </div>
                     ))}
                 </div>
-                <div className={`has-text-centered ${card_c}`}>
+                <div className={`has-text-centered ${card_c} mb-6`}>
                     <br />
                     <br />
                     <div className="is-hidden-desktop">

@@ -6,7 +6,7 @@ import faqData from 'src/static/faq';
 
 const FaqPage = () => {
     return (
-        <div style={{ minHeight: '100vh' }}>
+        <div>
             <div className="container">
                 <br />
                 <br />

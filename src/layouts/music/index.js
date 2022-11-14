@@ -31,7 +31,7 @@ const MusicLayout = ({ children }) => {
                 <source src="/media/music/music.mp3" type="audio/mp3" />
             </audio>
 
-            <div className={`${container} is-hidden-desktop`}>
+            <div className={`${container} is-hidden-desktop`} style={{ zIndex: '10' }}>
                 <button type="button" className="unstyled-button  mx-4" onClick={handleSound}>
                     <span className="icon is-size-4">
                         <img src={`/media/icons/${homeReducer.isMusicActive ? 'sound' : 'mute'}.png`} alt="" />

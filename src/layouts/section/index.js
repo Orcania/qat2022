@@ -36,6 +36,7 @@ const SectionLayout = ({ children, name }) => {
                 </div>
 
                 <div>{children}</div>
+                <br />
             </div>
         </div>
     );
